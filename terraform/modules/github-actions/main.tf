@@ -10,6 +10,14 @@ variable "cloudfront_dist_id" {
   type = string
 }
 
+variable "oidc_provider_arn" {
+  type = string
+}
+
+variable "github_repository" {
+  type = string
+}
+
 data "aws_caller_identity" "current" {}
 
 # IAM Role for GitHub Actions
@@ -22,7 +30,7 @@ resource "aws_iam_role" "github_actions" {
       {
         Effect = "Allow"
         Principal = {
-          Federated = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:oidc-provider/token.actions.githubusercontent.com"
+          Federated = var.oidc_provider_arn
         }
         Action = "sts:AssumeRoleWithWebIdentity"
         Condition = {
@@ -30,7 +38,7 @@ resource "aws_iam_role" "github_actions" {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
           }
           StringLike = {
-            "token.actions.githubusercontent.com:sub" = "repo:*:*"
+            "token.actions.githubusercontent.com:sub" = "repo:${var.github_repository}:*"
           }
         }
       }

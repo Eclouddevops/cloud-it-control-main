@@ -5,7 +5,6 @@ aws_region              = "us-east-1"
 environment             = "dev"
 domain_name             = "dev.cloud-it-control.example.com"
 certificate_domain      = "cloud-it-control.example.com"
-hosted_zone_id          = "Z1234567890ABC"  # Get from: aws route53 list-hosted-zones-by-name
 enable_waf              = false
 
 # Supabase Configuration

@@ -5,6 +5,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    tls = {
+      source  = "hashicorp/tls"
+      version = "~> 4.0"
+    }
   }
 }
 
@@ -81,16 +85,6 @@ module "cloudfront" {
   depends_on = [module.frontend_bucket]
 }
 
-# Route 53 DNS Record
-module "route53" {
-  source = "./modules/route53"
-  
-  hosted_zone_id         = var.hosted_zone_id
-  domain_name            = var.domain_name
-  cloudfront_domain_name = module.cloudfront.cloudfront_domain_name
-  cloudfront_zone_id     = module.cloudfront.cloudfront_zone_id
-}
-
 # CloudWatch Alarms
 module "monitoring" {
   source = "./modules/monitoring"
@@ -107,6 +101,8 @@ module "github_actions" {
   environment        = var.environment
   s3_bucket_name     = module.frontend_bucket.bucket_name
   cloudfront_dist_id = module.cloudfront.cloudfront_distribution_id
+  oidc_provider_arn  = aws_iam_openid_connect_provider.github_actions.arn
+  github_repository  = var.github_repository
 }
 
 # Secrets Manager
@@ -130,3 +126,13 @@ data "aws_caller_identity" "current" {}
 
 # Data source for current region
 data "aws_region" "current" {}
+
+data "tls_certificate" "github_actions" {
+  url = "https://token.actions.githubusercontent.com"
+}
+
+resource "aws_iam_openid_connect_provider" "github_actions" {
+  url             = "https://token.actions.githubusercontent.com"
+  client_id_list  = ["sts.amazonaws.com"]
+  thumbprint_list = [data.tls_certificate.github_actions.certificates[0].sha1_fingerprint]
+}

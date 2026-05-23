@@ -23,15 +23,16 @@ variable "certificate_domain" {
   type        = string
 }
 
-variable "hosted_zone_id" {
-  description = "Route 53 Hosted Zone ID"
-  type        = string
-}
-
 variable "enable_waf" {
   description = "Enable AWS WAF for CloudFront"
   type        = bool
   default     = true
+}
+
+variable "github_repository" {
+  description = "GitHub repository allowed to assume the deployment role"
+  type        = string
+  default     = "Eclouddevops/cloud-it-control-main"
 }
 
 variable "supabase_project_id" {
