@@ -20,6 +20,36 @@ All secrets live in **Settings → Secrets and variables → Actions** in your G
 
 ## Required Secrets
 
+### One-click provision and deploy workflow
+
+The `Provision AWS Infra and Deploy Website` workflow creates the Terraform state bucket, provisions AWS infrastructure, builds the frontend, deploys to S3, and invalidates CloudFront.
+
+| Secret | Source |
+|--------|--------|
+| `AWS_ACCESS_KEY_ID` | AWS IAM access key with permissions to create S3, CloudFront, ACM lookup, WAF, IAM OIDC/roles, CloudWatch, and Secrets Manager resources |
+| `AWS_SECRET_ACCESS_KEY` | Matching AWS IAM secret access key |
+| `VITE_SUPABASE_PROJECT_ID` | Supabase Dashboard -> Settings -> General |
+| `VITE_SUPABASE_URL` | Supabase Dashboard -> Settings -> API |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | Supabase Dashboard -> Settings -> API |
+
+Workflow inputs:
+
+| Input | Example |
+|-------|---------|
+| `environment` | `dev` |
+| `action` | Start with `plan`, then run `apply` |
+| `domain_name` | `dev.example.com` |
+| `certificate_domain` | `*.example.com` |
+| `state_bucket` | Leave blank to auto-create `cloud-it-control-tf-state-<env>-<account-id>` |
+
+After a successful apply, add the printed CNAME record in Cloudflare:
+
+```text
+Type: CNAME
+Name: <domain_name>
+Target: <cloudflare_cname_target output>
+```
+
 ### AWS — IAM OIDC Roles (one per environment)
 
 | Secret | Value source |

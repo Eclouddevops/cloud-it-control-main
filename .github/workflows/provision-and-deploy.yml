@@ -1,0 +1,196 @@
+name: Provision AWS Infra and Deploy Website
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment"
+        required: true
+        type: choice
+        options:
+          - dev
+          - staging
+          - uat
+          - prd
+        default: dev
+      action:
+        description: "Run plan only, or apply and deploy"
+        required: true
+        type: choice
+        options:
+          - plan
+          - apply
+        default: plan
+      aws_region:
+        description: "AWS region. CloudFront ACM certificates must be in us-east-1."
+        required: true
+        default: us-east-1
+      domain_name:
+        description: "Website hostname managed in Cloudflare, for example dev.example.com"
+        required: true
+      certificate_domain:
+        description: "Issued ACM certificate domain in us-east-1, for example *.example.com"
+        required: true
+      state_bucket:
+        description: "Optional Terraform state bucket. Leave blank to auto-create one."
+        required: false
+        default: ""
+
+env:
+  AWS_REGION: ${{ github.event.inputs.aws_region }}
+  TF_ENV: ${{ github.event.inputs.environment }}
+  TF_ACTION: ${{ github.event.inputs.action }}
+  TF_IN_AUTOMATION: "true"
+
+jobs:
+  provision-and-deploy:
+    name: Provision and deploy ${{ github.event.inputs.environment }}
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment == 'prd' && 'production' || github.event.inputs.environment }}
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Resolve Terraform state bucket
+        id: state
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          account_id="$(aws sts get-caller-identity --query Account --output text)"
+          if [ -n "${{ github.event.inputs.state_bucket }}" ]; then
+            bucket="${{ github.event.inputs.state_bucket }}"
+          else
+            bucket="cloud-it-control-tf-state-${TF_ENV}-${account_id}"
+          fi
+
+          if ! aws s3api head-bucket --bucket "$bucket" 2>/dev/null; then
+            if [ "$AWS_REGION" = "us-east-1" ]; then
+              aws s3api create-bucket --bucket "$bucket" --region "$AWS_REGION"
+            else
+              aws s3api create-bucket \
+                --bucket "$bucket" \
+                --region "$AWS_REGION" \
+                --create-bucket-configuration LocationConstraint="$AWS_REGION"
+            fi
+
+            aws s3api put-public-access-block \
+              --bucket "$bucket" \
+              --public-access-block-configuration BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true
+
+            aws s3api put-bucket-versioning \
+              --bucket "$bucket" \
+              --versioning-configuration Status=Enabled
+
+            aws s3api put-bucket-encryption \
+              --bucket "$bucket" \
+              --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"}}]}'
+          fi
+
+          echo "bucket=$bucket" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "~1.7"
+          terraform_wrapper: false
+
+      - name: Terraform init
+        working-directory: terraform
+        run: |
+          terraform init \
+            -backend-config="bucket=${{ steps.state.outputs.bucket }}" \
+            -backend-config="key=${{ env.TF_ENV }}/terraform.tfstate" \
+            -backend-config="region=${{ env.AWS_REGION }}" \
+            -backend-config="encrypt=true"
+
+      - name: Terraform validate
+        working-directory: terraform
+        run: terraform validate
+
+      - name: Terraform plan
+        working-directory: terraform
+        run: |
+          terraform plan \
+            -var-file="terraform.tfvars.${{ env.TF_ENV }}" \
+            -var="aws_region=${{ env.AWS_REGION }}" \
+            -var="environment=${{ env.TF_ENV }}" \
+            -var="domain_name=${{ github.event.inputs.domain_name }}" \
+            -var="certificate_domain=${{ github.event.inputs.certificate_domain }}" \
+            -var="github_repository=${{ github.repository }}" \
+            -var="supabase_project_id=${{ secrets.VITE_SUPABASE_PROJECT_ID }}" \
+            -var="supabase_url=${{ secrets.VITE_SUPABASE_URL }}" \
+            -var="supabase_publishable_key=${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}" \
+            -out="tfplan-${{ env.TF_ENV }}" \
+            -no-color
+
+      - name: Terraform apply
+        if: env.TF_ACTION == 'apply'
+        working-directory: terraform
+        run: terraform apply -auto-approve "tfplan-${{ env.TF_ENV }}"
+
+      - name: Read Terraform outputs
+        if: env.TF_ACTION == 'apply'
+        id: tfout
+        working-directory: terraform
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "s3_bucket=$(terraform output -raw s3_bucket_name)" >> "$GITHUB_OUTPUT"
+          echo "cloudfront_distribution_id=$(terraform output -raw cloudfront_distribution_id)" >> "$GITHUB_OUTPUT"
+          echo "cloudflare_cname_target=$(terraform output -raw cloudflare_cname_target)" >> "$GITHUB_OUTPUT"
+          echo "website_url=$(terraform output -raw website_url)" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Bun
+        if: env.TF_ACTION == 'apply'
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        if: env.TF_ACTION == 'apply'
+        run: bun install --frozen-lockfile
+
+      - name: Build application
+        if: env.TF_ACTION == 'apply'
+        run: bun run build
+        env:
+          VITE_SUPABASE_PROJECT_ID: ${{ secrets.VITE_SUPABASE_PROJECT_ID }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+
+      - name: Deploy website to S3
+        if: env.TF_ACTION == 'apply'
+        run: |
+          aws s3 sync dist/ "s3://${{ steps.tfout.outputs.s3_bucket }}/" \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --exclude ".git*"
+
+      - name: Invalidate CloudFront
+        if: env.TF_ACTION == 'apply'
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ steps.tfout.outputs.cloudfront_distribution_id }}" \
+            --paths "/*"
+
+      - name: Cloudflare DNS instruction
+        if: env.TF_ACTION == 'apply'
+        run: |
+          echo "Website URL: ${{ steps.tfout.outputs.website_url }}"
+          echo "Create this Cloudflare DNS record:"
+          echo "Type: CNAME"
+          echo "Name: ${{ github.event.inputs.domain_name }}"
+          echo "Target: ${{ steps.tfout.outputs.cloudflare_cname_target }}"
+          echo "Proxy status: DNS only until the site is verified, then enable proxy if desired."

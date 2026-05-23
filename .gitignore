@@ -18,6 +18,7 @@ dist-ssr
 *.tfstate.*
 .terraform/
 **/.terraform/
+cloud-it-control-main/
 
 # Editor directories and files
 .vscode/*
