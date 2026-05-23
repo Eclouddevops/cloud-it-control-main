@@ -1,0 +1,7 @@
+project_id = "yvzekynyerwbcfqslkfb"
+
+[functions.bootstrap-admin]
+verify_jwt = false
+
+[functions.send-contact-email]
+verify_jwt = false

@@ -1,0 +1,1030 @@
+{
+  "nav": {
+    "products": "Produkter",
+    "itControlBox": "IT Control Box",
+    "aboutUs": "Om oss",
+    "successStories": "Framgångshistorier",
+    "media": "Media",
+    "getStarted": "Kom igång"
+  },
+  "common": {
+    "yes": "Ja",
+    "no": "Nej",
+    "unknown": "Okänt",
+    "backToHome": "Tillbaka till startsidan",
+    "backToSolutions": "Tillbaka till lösningar",
+    "contactUs": "Kontakta oss",
+    "contactSales": "Kontakta försäljning",
+    "learnMore": "Läs mer",
+    "viewDetails": "Visa detaljer",
+    "scheduleDemo": "Boka en demo",
+    "getStarted": "Kom igång",
+    "comingSoon": "Kommer snart",
+    "exploreOtherProducts": "Utforska andra produkter",
+    "keyFeatures": "Nyckelfunktioner",
+    "keyCapabilities": "Nyckelförmågor",
+    "keyHighlights": "Nyckeltal",
+    "theChallenge": "Utmaningen",
+    "theSolution": "Lösningen",
+    "sendMessage": "Skicka meddelande",
+    "sending": "Skickar...",
+    "processing": "Bearbetar...",
+    "name": "Namn",
+    "email": "E-post",
+    "phone": "Telefon",
+    "organisation": "Organisation",
+    "followUs": "Följ oss",
+    "linkedinProfile": "LinkedIn-profil",
+    "shareOnLinkedin": "Dela på LinkedIn",
+    "privacyAccept": "Jag har läst och accepterar",
+    "privacyPolicyLink": "Integritetspolicyn",
+    "privacyRequired": "Du måste acceptera integritetspolicyn för att fortsätta."
+  },
+  "hero": {
+    "title1": "Omdefinierar slutanvändarstöd med",
+    "title2": "IT Control Box",
+    "description": "En integrerad svit för hantering av användaridentitet, användarenheter och O365-licenser. Optimera IT-driften med automatisering, säkerhet och kostnadskontroll."
+  },
+  "productCategories": {
+    "title": "Omfattande IT-automatisering",
+    "subtitle": "Tre kraftfulla lösningar utformade för att transformera din IT-verksamhet",
+    "identity": {
+      "title": "Identitetshantering",
+      "description": "Zero-touch, felfri livscykelhantering av användare med säker, delegerad daglig IT-administration från ett enda gränssnitt.",
+      "features": [
+        "Zero-Touch onboarding & offboarding från HRMS",
+        "Persona-baserad tilldelning av grundläggande behörigheter",
+        "Automatiserad lösenordsrotation för lokala administratörer (LAPS)",
+        "Dynamisk åtkomstkontroll & detektion av överflödiga behörigheter",
+        "Identitetskarantän för snabb incidentrespons",
+        "Komplett revisionsspår för alla administratörsaktiviteter"
+      ],
+      "highlights": {
+        "securityFirst": "Säkerhet först",
+        "lessEffort": "70% mindre arbete",
+        "auditReady": "Revisionsredo"
+      }
+    },
+    "device": {
+      "title": "Enhetshantering",
+      "description": "Distribuera konsekventa, säkra och fullt konfigurerade Windows-miljöer över all hårdvara med zero-touch-automatisering.",
+      "features": [
+        "Universell Windows 11 SOE för all hårdvara",
+        "Säkerhetshärdning (CIS, NIST, ISO27001)",
+        "Zero-Touch-driftsättning via MDT eller SCCM",
+        "Automatisk domänanslutning till AD eller Azure AD",
+        "Anpassad appdistribution vid provisionering",
+        "LAPS-integration för slutpunktssäkerhet"
+      ],
+      "highlights": {
+        "minutesNotDays": "Minuter, inte dagar",
+        "secureByDefault": "Säker som standard",
+        "deployed": "15 000+ driftsatta"
+      }
+    },
+    "o365": {
+      "title": "O365-licenshantering",
+      "description": "Kontrollera kostnader och driv ansvarsskyldighet för M365-utgifter med realtidsinsyn och automatiserad licenshantering.",
+      "features": [
+        "Licensinventering och användningsanalys i realtid",
+        "Persona-baserad licenstilldelning",
+        "Automatisk återkallelse av korttidslicenser",
+        "Kostnadsansvar per division",
+        "Identifiera oanvända och överutnyttjade SKU:er",
+        "Automatiserade veckovisa e-postmeddelanden till intressenter"
+      ],
+      "highlights": {
+        "eliminateWaste": "Eliminera slöseri",
+        "realTimeData": "Realtidsdata",
+        "fullVisibility": "Full synlighet"
+      }
+    }
+  },
+  "benefits": {
+    "title": "Varför välja IT Control Box?",
+    "subtitle": "En säkrare, effektivare och mer kostnadseffektiv IT-organisation",
+    "items": [
+      {
+        "title": "Minska manuellt arbete med 70%",
+        "description": "Automatisera komplexa, flerstegsuppgifter i AD, Azure och Intune. Ge junior IT-personal möjlighet att lösa problem säkert."
+      },
+      {
+        "title": "Förbättra säkerhet och efterlevnad",
+        "description": "Minimera privilegierad åtkomst, eliminera stående lokala administratörsrättigheter och tillämpa säkerhetspolicyer konsekvent."
+      },
+      {
+        "title": "Optimera IT-kostnader",
+        "description": "Eliminera slöseri på oanvända M365-licenser och frigör tusentals arbetstimmar från repetitiva uppgifter."
+      },
+      {
+        "title": "Enkel kommersiell modell",
+        "description": "Inga per-användare-avgifter, inga per-enhet-avgifter, inga återkommande avgifter. En enda transparent investering för en permanent lösning."
+      }
+    ]
+  },
+  "features": {
+    "badge": "Företagsfunktioner",
+    "title": "Byggd för modern IT-drift",
+    "subtitle": "Omfattande funktioner utformade för att möta kraven i företagsmiljöer",
+    "groups": [
+      {
+        "category": "Integrationsmöjligheter",
+        "features": [
+          "ServiceNow & Symphony Summit-integration",
+          "Active Directory & Azure AD-synkronisering",
+          "Microsoft Teams-appintegration",
+          "SCCM & Intune-automatisering",
+          "Stöd för flera ärendesystem"
+        ]
+      },
+      {
+        "category": "Säkerhet och efterlevnad",
+        "features": [
+          "4K-certifikatkryptering",
+          "Automatiserad lösenordsrotation",
+          "CIS, NIST, ISO27001-efterlevnad",
+          "Kompletta revisionsspår",
+          "Rollbaserad åtkomstkontroll"
+        ]
+      },
+      {
+        "category": "Automatiseringsfunktioner",
+        "features": [
+          "Zero-Touch-driftsättningar",
+          "Smarta förkontrollvalideringar",
+          "Dynamisk AD-inloggnings-ID-generering",
+          "Automatiserad licenstilldelning",
+          "Parallell systemprovisionering"
+        ]
+      }
+    ]
+  },
+  "technicalFeatures": {
+    "title": "Teknisk arkitektur och förmågor",
+    "description": "Ett modulärt automationsorkestreringslager utformat för hybrida Microsoft-miljöer. Överbryggar det operativa gapet mellan lokal Active Directory, Azure Entra ID, Microsoft Intune och Exchange Online via säker API-driven arkitektur.",
+    "capabilities": [
+      {
+        "title": "Hybrid identitet logik motor",
+        "description": "Automatiserad komplex identitetslivscykelhantering genom att hantera kataloglogik som inbyggda verktyg ofta lämnar manuell.",
+        "features": [
+          { "title": "Kollisionshantering och sanering", "desc": "Genererar unika UPN:er och kollisionsfria ID:n, sanerar autentiseringsuppgifter för att utesluta tvetydiga tecken (t.ex. 'I', 'l', '0', 'O')." },
+          { "title": "Attributorkestrering", "desc": "Automatiserar OU-sökvägsberäkning baserat på affärsenhet/platslogik och synkroniserar extensionAttributes (7, 8, 12) för nedströmskompatibilitet." },
+          { "title": "Persona-baserade behörigheter", "desc": "Tilldelar dynamiskt licens-SKU:er (E1/E3/F1) och säkerhetsgruppsmedlemskap baserat på validerade användarpersonas." }
+        ]
+      },
+      {
+        "title": "Agentlös slutpunktssäkerhet (LAPS)",
+        "description": "Ersätter statiska lokala administratörsrättigheter med en dynamisk, tidsbegränsad Least Privilege-modell utan dedikerad agentinstallation.",
+        "features": [
+          { "title": "Agentlös rotation", "desc": "Utnyttjar CrowdStrike API:er eller Intune-skript för att automatisera månatlig rotation av lokala administratörslösenord i hela flottan." },
+          { "title": "Säker transport", "desc": "Lösenord säkrade i vila och under transport med 4K-certifierad kryptering." },
+          { "title": "Tillfällig åtkomst", "desc": "Autentiseringsuppgifter fungerar med TTL-bas, upphör automatiskt och roterar inom 4 timmar för att förhindra återanvändning." }
+        ]
+      },
+      {
+        "title": "API-drivna Intune-operationer",
+        "description": "Exponerad specifika Microsoft Graph API-slutpunkter för att demokratisera komplexa Intune-operationer utan att bevilja breda 'Intune Administrator'-roller.",
+        "features": [
+          { "title": "Hardware Hash-injektion", "desc": "Direkt API-kapacitet för att ladda upp Hardware Hashes (Autopilot) och Mac-serienummer (ABM) direkt till Intune-klienten." },
+          { "title": "Livscykelrensning", "desc": "Utför 'Safe Removal'-protokoll som rensar poster från AD, Azure AD, Intune och Autopilot för att förhindra synkroniseringskonflikter." },
+          { "title": "BitLocker-granskning", "desc": "Säker hämtning av BitLocker-återställningsnycklar från AD/Azure AD med obligatorisk oföränderlig loggning." }
+        ]
+      },
+      {
+        "title": "Standard Operating Environment (SOE)",
+        "description": "En zero-touch-driftsättningsmotor utformad för Windows 11-migrering och standardisering i stor skala.",
+        "features": [
+          { "title": "Universell bildarkitektur", "desc": "Distribuerar en enda, härdad Windows 11-avbildning över hårdvara från flera leverantörer med driverinjektion i realtid." },
+          { "title": "Säkerhetshärdning", "desc": "Automatiserar efterlevnad av CIS/NIST-riktmärken genom att inaktivera sårbara tjänster och tillämpa säkra policyer före start." },
+          { "title": "Backend-agnostisk", "desc": "Stöder SCCM- och MDT-infrastrukturer med parallell driftsättning via LAN eller offline via USB för isolerade anläggningar." }
+        ]
+      },
+      {
+        "title": "Exchange & samarbetsstyrning",
+        "description": "Automatiserar detaljerade Exchange-uppgifter som vanligtvis kräver RBAC-tilldelningar på hög nivå.",
+        "features": [
+          { "title": "Tidsbegränsad delegering", "desc": "Automatiserar 'Full Access' och 'Send-As'-delegering med obligatoriska utgångsparametrar för automatisk återkallelse." },
+          { "title": "Trafikkontroll", "desc": "Tillämpar strikt interna e-postvidarebefordringsregler för att förhindra dataexfiltrering till externa domäner." },
+          { "title": "Distributionsarkitektur", "desc": "Hanterar DL-skapandelogik och ägarskapsattribut utan manuell Exchange Admin Center-interaktion." }
+        ]
+      },
+      {
+        "title": "Säkerhets- och revisionsramverk",
+        "description": "Omfattande efterlevnads- och spårbarhetslager för alla automatiserade operationer.",
+        "features": [
+          { "title": "Validerad exekvering", "desc": "Automatiseringsutlösare styrs av ITSM-integration; operationer utförs endast vid validerat, godkänt ärende-ID." },
+          { "title": "Oföränderliga revisionsspår", "desc": "Varje åtgärd loggas för ISMS/ISO-efterlevnad, med full spårbarhet av 'Vem, Vad och När' för varje uppgift." }
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Redo att transformera din IT-verksamhet?",
+    "description": "Gå med organisationer som redan sparar tusentals timmar med AIOBZ:s intelligenta automationslösningar.",
+    "noRecurringFees": "Inga återkommande avgifter",
+    "getStarted": "Kom igång direkt",
+    "noPerDeviceFee": "Ingen avgift per enhet",
+    "transparentPricing": "Transparent prissättning",
+    "noPerUserFees": "Inga avgifter per användare",
+    "unlimitedUsers": "Obegränsade användare"
+  },
+  "footer": {
+    "description": "IT-automationslösningar för företag som levererar mätbara resultat.",
+    "products": "Produkter",
+    "company": "Företag",
+    "resources": "Resurser",
+    "technicalDatasheet": "Tekniskt datablad",
+    "quickAssessment": "Snabbedömning",
+    "copyright": "Alla rättigheter förbehållna - © copyright AIObz Consulting"
+  },
+  "mainHero": {
+    "badge": "Företagsanpassade lösningar · Intelligent automatisering · Framtidssäker",
+    "title1": "AI-driven IT-drift",
+    "title2": "Intelligens möter automatisering",
+    "description1": "Manuella IT-operationer är kostsamma, felbenägna och utsätter organisationer för säkerhetsrisker. Mänsklig ineffektivitet leder till licensslöseri, efterlevnadsluckor och operativa flaskhalsar som tömmer resurser och ökar kostnaderna.",
+    "description2": "AIObz transformerar ditt IT-landskap med proaktiv automatisering och AI-driven analys. Eliminera manuella fel, optimera licenskostnader, stärk säkerhetspositionen och få prediktiva insikter — samtidigt som du minskar operativa omkostnader med upp till 70%."
+  },
+  "clientLogos": {
+    "title": "Betrodd av ledande företag"
+  },
+  "productBoxes": {
+    "itControlBox": "IT Control Box",
+    "itControlBoxSub": "Komplett identitets-, enhets- och O365-hantering",
+    "itam": "IT Asset Management",
+    "itamSub": "Intelligent upptäckt och livscykelhantering",
+    "aiObz": "AI OBZ",
+    "aiObzSub": "Prediktiv observerbarhet med händelsekorrelation"
+  },
+  "productsOverview": {
+    "itControlBox": {
+      "title": "IT Control Box",
+      "subtitle": "Komplett IT-driftskontroll",
+      "description": "Företagsanpassad automatisering för identitetshantering, enhetsdriftsättning och O365-licensoptimering. Eliminera manuella processer, stärk säkerheten och minska driftskostnaderna.",
+      "features": [
+        "Zero-Touch livscykelhantering av identiteter",
+        "Automatiserad Windows 11-enhetsdriftsättning",
+        "O365-licenskostnadsoptimering",
+        "Realtidsefterlevnad och revision",
+        "Active Directory & Azure AD-synkronisering",
+        "Säkerhetshärdning & LAPS-integration"
+      ],
+      "highlights": {
+        "timeSaved": "70% tid sparad",
+        "auditReady": "100% revisionsredo",
+        "zeroSubs": "Inga abonnemang"
+      }
+    },
+    "itam": {
+      "title": "ITAM - IT Asset Management",
+      "subtitle": "Intelligent tillgångsupptäckt och livscykelhantering",
+      "description": "Företagsanpassad ITAM-plattform med automatiserad hybrid IT-upptäckt, ITIL-kompatibel CMDB, dynamisk beroendekartering och detaljerad programvarumätning. Eliminera blinda fläckar och optimera IT-utgifter.",
+      "features": [
+        "Hybrid IT-upptäckt (agent och agentlös)",
+        "ITIL-kompatibel CMDB",
+        "Dynamisk beroendekartering",
+        "Komplett livscykelhantering av tillgångar",
+        "Programvarumätning och licensoptimering",
+        "ITSM-integration (ServiceNow, Jira)"
+      ],
+      "highlights": {
+        "autoDiscovery": "Automatisk upptäckt",
+        "costSavings": "Kostnadsbesparingar",
+        "fullCompliance": "Full efterlevnad"
+      }
+    },
+    "aiObz": {
+      "title": "AI OBZ",
+      "subtitle": "Prediktiv observerbarhetsplattform",
+      "description": "AI-driven händelsekorrelation och prediktiv analys för proaktiv IT-drift. Identifiera problem innan de påverkar användare med intelligent mönsterigenkänning och automatiserad rotorsaksanalys.",
+      "features": [
+        "AI-driven händelsekorrelation",
+        "Prediktiv problemdetektering",
+        "Automatiserad rotorsaksanalys",
+        "Dataintegrering från flera källor",
+        "Anomalidetektering och larm",
+        "Prestandatrendanalys"
+      ],
+      "highlights": {
+        "aiPowered": "AI-driven",
+        "predictive": "Prediktiv",
+        "realTime": "Realtid"
+      }
+    }
+  },
+  "heroCTA": {
+    "technicalDataSheet": "Tekniskt datablad"
+  },
+  "videoShowcase": {
+    "title": "Se IT Control Box i aktion",
+    "description": "Se hur vår automatiseringsplattform transformerar IT-driften"
+  },
+  "itcb": {
+    "videoTitle": "IT Control Box - Komplett livscykel",
+    "videoDescription": "Automatisering från onboarding av slutanvändare, onboarding av enheter, åtkomstkontroll, minimera administratörsprivilegier, minska licensslöseri, förenkla platsadministratörens arbete.",
+    "shareTitle": "Dela IT Control Box på LinkedIn"
+  },
+  "assessment": {
+    "heroTitle": "IT Control Box mognadsbedömning",
+    "heroDescription": "Utvärdera din nuvarande IT-driftsmognad och upptäck hur IT Control Box kan hjälpa dig att spara arbete, minska kostnader, förbättra användarupplevelsen och stärka säkerhetsstyrningen.",
+    "formTitle": "Din information",
+    "scopeTitle": "Bedömningsomfång",
+    "scopeDescription": "Välj de områden du vill bedöma",
+    "inputsTitle": "Organisationsstorlek",
+    "identitiesLabel": "Antal identiteter",
+    "licenseCostLabel": "Genomsnittlig månatlig licenskostnad (€/användare)",
+    "hourlyRateLabel": "IT-support timkostnad (€/tim)",
+    "questionsTitle": "Bedömningsfrågor",
+    "calculateResults": "Beräkna resultat",
+    "calculating": "Beräknar...",
+    "insufficientInfo": "Otillräcklig information",
+    "pleaseAnswerOne": "Svara på minst en fråga för att beräkna resultat.",
+    "fillRequired": "Vänligen fyll i ditt namn och e-post",
+    "selectScope": "Vänligen välj minst ett område",
+    "selectAnswer": "Välj ett svar",
+    "backToAssessment": "Tillbaka till bedömning",
+    "downloadResults": "Ladda ner resultat",
+    "progress": "Framsteg",
+    "of": "av",
+    "questionsAnswered": "frågor besvarade",
+    "resultsTitle": "Bedömningsresultat",
+    "resultsDescription": "Baserat på dina svar, så här kan IT Control Box transformera din IT-verksamhet",
+    "responsesTitle": "Bedömningssvar",
+    "overallMaturity": "Övergripande mognad",
+    "currentVsImproved": "Nuvarande vs förbättrad mognad",
+    "maturitySummary": "Sammanfattning av mognadspoäng",
+    "estimatedAnnualValue": "Uppskattat årligt värde",
+    "combinedSavings": "Kombinerade arbets- och licenskostnadsbesparingar för {{count}} identiteter",
+    "effortSavings": "Arbetsbesparingar",
+    "effortSavingsValue": "{{hours}} tim/månad",
+    "effortSavingsAnnual": "€{{amount}}/år",
+    "effortSavingsDesc": "Automatiserade arbetsflöden minskar manuella IT-uppgifter avsevärt",
+    "licenseCostOptimization": "Licenskostnadsoptimering",
+    "licenseCostValue": "{{pct}}% potentiella besparingar",
+    "licenseCostAnnual": "€{{amount}}/år",
+    "licenseCostDesc": "Rätt dimensionering av licenser baserat på faktiska användningsmönster",
+    "userExperience": "Användarupplevelse",
+    "uxValue": "{{pct}}% förbättring",
+    "selfServiceEnabled": "Självbetjäning aktiverad",
+    "uxDesc": "Snabbare svarstider och självbetjäningsfunktioner",
+    "securityGovernance": "Säkerhet och styrning",
+    "securityValue": "{{pct}}% förbättring",
+    "complianceEnhanced": "Efterlevnad förbättrad",
+    "securityDesc": "Automatiserad efterlevnad och säkerhetsövervakning i realtid",
+    "categories": {
+      "O365 Automation": "O365-automatisering",
+      "Device Management": "Enhetshantering",
+      "Identity Operations": "Identitetsoperationer",
+      "Enterprise Identity Management": "Företagets identitetshantering"
+    },
+    "scopes": {
+      "o365": "O365-automatisering",
+      "device": "Enhetshantering",
+      "identity": "Identitetsoperationer",
+      "enterprise": "Företagets identitetshantering"
+    },
+    "q1": { "question": "Har ni persona-baserad O365-licenstilldelning?", "options": ["Ja", "Nej"] },
+    "q2": { "question": "Hur många användare har enligt dig högre 365-prenumeration än de faktiskt använder eller behöver?", "options": ["Mindre än 5%", "5 - 15%", "Mer än 15%", "Okänt"] },
+    "q3": { "question": "Är ert HR-/L&D-team bemyndigat att kontrollera överträdelser av HR- eller L&D-policyer eller KPI:er?", "options": ["Ja", "Nej"] },
+    "q4": { "question": "Vad är ledtiden för att avveckla eller nedgradera användarnas tillfälliga licens?", "options": ["Mindre än 1 vecka", "1-4 veckor", "Manuellt eller tillfälligt"] },
+    "q5": { "question": "Övervakar ni faktisk O365-förbrukning jämfört med licenstilldelning?", "options": ["Ja", "Nej"] },
+    "q6": { "question": "Är ni medvetna om undantag som USB-åtkomst, gruppmedlemskap anpassade till personaförändringar?", "options": ["Ja", "Nej"] },
+    "q7": { "question": "Är era senior IT-ledare upptagna med komplexa slutanvändarhanteringsuppgifter som kryptering, BitLocker, grupprinciper?", "options": ["Nej, helt hanterat av junior-teamet", "Mindre än 10 ärenden per månad", "Mer än 10 ärenden per månad"] },
+    "q8": { "question": "Har ni automatisering för utrullning av slutpunktsskydd?", "options": ["Ja", "Nej"] },
+    "q9": { "question": "Spårar ni antal enheter per användare?", "options": ["Ja", "Nej"] },
+    "q10": { "question": "Hur hanterar ni geo-fencing för roaming-användare och undantag?", "options": ["Vi hanterar inte det", "Låg förfrågan - mindre än 30 per månad", "Mer än 30 förfrågningar"] },
+    "q11": { "question": "Hur många BitLocker-incidenter/förfrågningar får ni per månad som kräver manuell hantering?", "options": ["Okänt", "Mindre än 20", "20 - 50", "50+"] },
+    "q12": { "question": "Hur många förfrågningar får ni per månad om att ta bort, ändra mobil enhet eller policy?", "options": ["Mindre än 20", "20-100", "100+"] },
+    "q13": { "question": "Hur många användare har lokal administratörsåtkomst?", "options": ["Okänt", "Mindre än 10%", "Mer än 10%", "Ingen"] },
+    "q14": { "question": "Vad är er enhetsefterlevnadskvot?", "options": ["Okänt", "Mindre än 50%", "50-85%", "Mer än 85%"] },
+    "q15": { "question": "Får IT-chefer eller säkerhetschefer lättanvända rapporter om undantag?", "options": ["Ja", "Nej"] },
+    "q16": { "question": "Har ni automatisering för identitetskarantän över flera plattformar och appar?", "options": ["Ja", "Nej", "TAT mindre än 1 timme", "TAT 1-6 timmar", "TAT mer än 6 timmar"] },
+    "q17": { "question": "Har ni flera team som hanterar AD, Azure, Intune? Finns det luckor som orsakar synkroniseringsproblem?", "options": ["Flera team - Ja", "Flera team - Nej", "Värdnamnsåteranvändning - Ja", "Värdnamnsåteranvändning - Nej"] },
+    "q18": { "question": "Har ni säker automatisering i certifikathantering?", "options": ["Ja", "Nej"] },
+    "q19": { "question": "Vet ni hur många användare som återanvänder samma lösenord eller har icke-kompatibla lösenord?", "options": ["Mindre än 10%", "10-40%", "Okänt eller mer än 40%"] },
+    "q20": { "question": "Använder era användare lösenordsåterställning via självbetjäning? Hur mycket tid lägger er IT-support månadsvis på dessa förfrågningar?", "options": ["Mindre än 10% självbetjäning", "10-25% självbetjäning", "25-60% självbetjäning", "Okänt"] },
+    "q21": { "question": "Hur ofta synkroniseras HR-uppdateringar relaterade till roll, division, plats etc med AD?", "options": ["Automatiserad synkronisering", "Manuell synkronisering"] },
+    "q22": { "question": "Hur många lokala administratörsåtkomster har ni beviljat? Under hur lång tid?", "options": ["Mindre än 5%", "5 - 15%", "Mer än 15%", "Okänt"] },
+    "q23": { "question": "Hur många delade licenser är tilldelade baserat på funktion eller användning av flera personer eller tjänster?", "options": ["Okänt", "Mindre än 50", "50 - 200", "200+"] },
+    "q24": { "question": "Finns det automatisering för att skapa IT-supportteamens konton?", "options": ["Ja", "Nej"] },
+    "q25": { "question": "Vilken andel ärenden eskaleras från L1 till L2 för felsökning?", "options": ["Mindre än 5%", "5 - 15%", "Mer än 15%", "Okänt"] },
+    "q26": { "question": "Vilken andel slutanvändare misslyckades i simulerad phishing?", "options": ["Mindre än 15%", "15-45%", "Vi genomför det inte"] },
+    "q27": { "question": "Vilken andel av lösenordsåterställning och MFA-återställningsärenden löses via självbetjäning eller automatisering?", "options": ["Mindre än 20%", "20-70%", "Mer än 70%"] },
+    "q28": { "question": "Är era godkännare aktiverade för att förstå kostnads- eller säkerhetspåverkan vid godkännande av förfrågningar?", "options": ["Ja", "Nej"] },
+    "q29": { "question": "Är era IT-chefer/ledare utrustade med verktyg för snabb revision och forensik av IDAM?", "options": ["Inga - mer än 2 veckor", "1-5 dagar", "Mindre än 8 timmar", "1-2 timmar"] },
+    "q30": { "question": "Har ni haft tjänsteavbrott på grund av certifikatutgång?", "options": ["Ja", "Nej"] },
+    "q31": { "question": "Har ni revisionsrapporter för att spåra åtkomst under hela livscykeln eller tidsperioden?", "options": ["Ja", "Nej"] },
+    "q32": { "question": "Har ni automatiserad kontroll av åtkomständringar baserat på rollförändringar?", "options": ["Ja", "Nej"] },
+    "q33": { "question": "Har ni automatisering för massonboarding/avboarding?", "options": ["Ja", "Nej"] },
+    "q34": { "question": "Spårar ert team eller er leverantör nya hot mot identitet och åtkomst, särskilt i applikationslandskapet?", "options": ["Ja", "Nej"] },
+    "q35": { "question": "Hur ofta spårar ni överflödig åtkomst (fortsatt åtkomst när personer byter roll)?", "options": ["Mindre än 10% av personerna kan ha överflödig åtkomst", "10-30% kan ha extra åtkomst", "Vi spårar eller kontrollerar inte"] }
+  },
+  "datasheet": {
+    "title": "IT Control Box tekniskt datablad",
+    "description": "Få omfattande teknisk dokumentation som täcker utmaningar, lösningar och detaljerade specifikationer för vår enhetliga IT-hanteringsplattform.",
+    "whatsInside": "Innehåll:",
+    "identityMgmt": "Identitetshantering",
+    "identityMgmtDesc": "AD-livscykelautomatisering, massoperationer, självbetjäningsfunktioner",
+    "deviceMgmt": "Enhetshantering",
+    "deviceMgmtDesc": "SOE-automatisering, LAPS-integration, efterlevnadsövervakning",
+    "o365LicenseMgmt": "O365-licenshantering",
+    "o365LicenseMgmtDesc": "Licensoptimering, användningsanalys, kostnadskontroll",
+    "techSpecs": "Tekniska specifikationer",
+    "techSpecsDesc": "Arkitektur, säkerhet, driftsättningskrav, prissättning",
+    "downloadTitle": "Ladda ner {{name}}-datablad",
+    "downloadDesc": "Fyll i dina uppgifter för att ta emot det tekniska databladet",
+    "downloadBtn": "Ladda ner datablad"
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "description": "Fyll i dina uppgifter så återkommer vi inom kort",
+    "namePlaceholder": "Ditt fullständiga namn",
+    "emailPlaceholder": "din@epost.se",
+    "phonePlaceholder": "+46 70 000 00 00",
+    "orgPlaceholder": "Ditt företagsnamn",
+    "thankYou": "Tack!",
+    "thankYouDesc": "Vi har tagit emot ditt meddelande och skickat en bekräftelse till din e-post. Vårt team återkommer inom kort.",
+    "successToast": "Tack! Vi hör av oss snart.",
+    "errorSubmit": "Kunde inte skicka. Försök igen.",
+    "errorRateLimit": "Vänligen vänta innan du försöker igen.",
+    "errorRequired": "Vänligen fyll i obligatoriska fält",
+    "errorEmail": "Vänligen ange en giltig e-postadress"
+  },
+  "aboutUs": {
+    "title": "Om oss",
+    "ourVision": "Vår vision",
+    "visionQuote": "\"Möjliggöra för kunder och deras supportteam att leverera högre värde från befintliga IT-verktyg och teknologier.\"",
+    "leadershipTeam": "Ledningsgrupp",
+    "getInTouch": "Kontakta oss",
+    "india": "Indien",
+    "indiaAddress": "Swami Krupa 4/704, Kolshet Road, Dhokali, Thane, Maharashtra – 400607",
+    "sweden": "Sverige",
+    "swedenAddress": "Odlingsgatan 7C, 174 53 Sundbyberg, Sverige",
+    "mahesh": {
+      "name": "Mahesh Koli",
+      "role": "Medgrundare, verkställande rådgivare",
+      "bio1": "Mahesh Koli är medgrundare av IT Control Box och en erfaren global IT-transformationsledare med över 30 års erfarenhet av att hjälpa företag att modernisera sina teknologilandskap. Innan han grundade IT Control Box tillbringade Mahesh 15+ år hos Capgemini & Sogeti Group, där han tjänstgjorde som Vice President – Cloud Transformation and Delivery och ledde storskaliga program för globala kunder.",
+      "bio2": "Under sin karriär har Mahesh arbetat extensivt inom bank, försäkring, läkemedel, fordon och tillverkningssektorerna och levererat mätbara resultat inom molntransformation, cybersäkerhet, digital arbetsplats, End-User Computing (EUC) och applikationsmodernisering. Hans ledarskap har konsekvent drivit affärstillväxt, innovation och operativ effektivitet i stor skala.",
+      "bio3": "Utöver Capgemini har Mahesh haft ledande befattningar hos ledande produkt- och plattformsföretag som Majesco, Mirantis (Docker-ekosystemet), Yodlee (Evernet), samt OEM-företag inklusive HP och Acer. Han har tjänstgjort i olika roller — landschef, CIO, affärsenhetsansvarig, portföljledare, leverans- och driftchef och managementkonsult — och byggt högpresterande team, definierat go-to-market-strategier, utvecklat partnerskap, skalat konton och levererat hållbar lönsamhet i olika regioner.",
+      "quote": "\"Jag är entusiastisk över att ta med min globala erfarenhet för att möta kritiska IT-utmaningar som ofta förbises av stora produkt- och tjänsteorganisationer. Efter att ha arbetat i USA, Storbritannien, Europa, Mellanöstern och APAC tror jag starkt på att lösa verkliga, operativa problem med pragmatiska, automationsfokuserade lösningar. Med stöd av våra tidiga kunder ser vi denna vision ta form på ett mycket påtagligt sätt.\""
+    },
+    "vinod": {
+      "name": "Vinod Dadhe",
+      "role": "Medgrundare, driftdirektör",
+      "bio1": "Vinod Dadhe är medgrundare av IT Control Box och tjänstgör som driftdirektör på Vinit Consulting. Han har över 25 års djup teknisk och operativ erfarenhet av Microsofts företagsteknologier, med stark expertis inom Exchange, Microsoft 365 (M365), SCCM, Intune, Azure Entra och relaterade Microsoft-plattformar.",
+      "bio2": "Vinod har arbetat inom tillverkning, bank, IT-tjänster och OEM-produktorganisationer och stöttat företag världen över med teknikimplementeringar, systemintegrationer och automatiseringsinitiativ. Hans praktiska bakgrund gör det möjligt för honom att överbrygga klyftan mellan IT-strategi och daglig operativ verklighet.",
+      "bio3": "Under åren har Vinod designat och levererat många IT-automatiseringar för slutanvändarsupport, särskilt kring Active Directory, M365, Intune, SCCM och identitetsdrivna arbetsflöden. Hans arbete återspeglar en djup förståelse för de utmaningar som slutanvändare, IT-supportteam och säkerhetsfunktioner står inför.",
+      "quote": "\"Jag har ägnat år åt att leverera automationslösningar för slutanvändarsupport och Microsoft-plattformar, och jag har sett på nära håll var traditionella verktyg brister. Genom att kombinera verklig kundfeedback med praktisk automationserfarenhet har vi byggt IT Control Box för att hjälpa organisationer att få mycket mer värde från sina befintliga Microsoft-investeringar. Nu är vi redo att skala denna inverkan globalt.\""
+    }
+  },
+  "successStories": {
+    "videoTitle": "IT Control Box framgångshistoria",
+    "videoDescription": "Se hur företag uppnår operativ excellens med IT Control Box-automatisering",
+    "shareTitle": "Dela denna framgångshistoria på LinkedIn",
+    "ctaTitle": "Redo att skriva din framgångshistoria?",
+    "ctaDescription": "Gå med ledande företag som har transformerat sin IT-verksamhet med IT Control Box.",
+    "stories": [
+      {
+        "title": "Bemästra global driftsättning",
+        "subtitle": "Bevisad skala, effektivitet och räckvidd i företagsskala",
+        "challenge": "Ett stort multinationellt företag stod inför den enorma uppgiften att driftsätta Windows 11 över en mångfaldig och komplex uppsättning internationella och inhemska anläggningar. Det manuella arbetet som krävdes skulle ha varit enormt, med risk för inkonsekvenser, förseningar och betydande belastning på IT-resurser.",
+        "solution": "Organisationen använde IT Control Box Standard Operating Environment (SOE) automatiseringsverktyg för massdriftsättning. Lösningen tillhandahöll en enda, universell Windows 11-avbildning som stöder alla affärsenheter, platser och flera hårdvarumodeller (HP, Dell, Lenovo), vilket säkerställer konsekvens och säkerhetshärdning baserat på branschens bästa praxis.",
+        "highlights": [
+          "Framgångsrikt driftsatt på anläggningar inklusive Grangemouth, Lexington, Sellersville, Kurla, Lower Parel och Digwal",
+          "Sömlös hantering av flotta i övergång mellan Windows 10 (7 896 enheter) och Windows 11 (7 554 enheter)",
+          "Universell avbildning som stöder flera hårdvaruleverantörer"
+        ],
+        "metrics": [
+          { "value": "23 175", "label": "Totalt driftsatta system" },
+          { "value": "15,45K", "label": "Mantimmar sparade" }
+        ]
+      },
+      {
+        "title": "Säkra 20 000+ slutpunkter",
+        "subtitle": "Automatiserad lösenordshantering i stor skala",
+        "challenge": "Ohanterade lokala administratörsprivilegier över en massiv företagsflotta skapade en kritisk attackvektor. Organisationen behövde insyn och kontroll över 20 000+ tillgångar inom företags-, partner- och lagerenheter.",
+        "solution": "Organisationen driftsatte IT Control Box LAPs-appen för agentlös, automatiserad hantering av lokala administratörslösenord. Systemet tillhandahåller lösenordsrotation i realtid, flottsynlighet och inventarieintelligens.",
+        "highlights": [
+          "17 634 administrativa lösenord ändrades framgångsrikt med hög tillförlitlighet",
+          "Flotthanteringssynlighet över 20 000+ tillgångar",
+          "Identifierade 'Top 20 långsammaste systemen' med starttider från 20 till 582 minuter för proaktivt underhåll"
+        ],
+        "metrics": [
+          { "value": "58 100", "label": "Totala LAPS-användningar sedan juli 2023" },
+          { "value": "14 980", "label": "Lösenord roterade senaste 30 dagarna" }
+        ]
+      },
+      {
+        "title": "Driva finansiell effektivitet i O365",
+        "subtitle": "Licenshantering i företagsskala",
+        "challenge": "Ett företag med tusentals användare hade svårt att spåra Office 365-licensförbrukning över många SKU:er (E1, E3, F1, Project, Visio) och affärsenheter. Denna brist på insyn ledde till överprovisionering, slösad budget och ett reaktivt förhållningssätt till licenstillgänglighet.",
+        "solution": "Organisationen driftsatte Office 365 License Management-verktyget inom IT Control Box. Systemet tillhandahåller realtidsspårning av anskaffade licenser jämfört med faktisk användning för varje SKU och affärsgrupp, med automatiserad veckorapportering och en flerstegs godkännandeprocess för nya licensreservationer.",
+        "highlights": [
+          "Realtidsspårning över E1, E3, EOA, M365F1, M365F3, EMS E3 och fler SKU:er",
+          "Automatiserad veckorapportering för licensutnyttjande",
+          "Flerstegs godkännandeprocess för nya licensreservationer"
+        ],
+        "metrics": [
+          { "value": "19 000+", "label": "Hanterade licenser" },
+          { "value": "Precision", "label": "Optimering i stor skala" }
+        ]
+      }
+    ]
+  },
+  "media": {
+    "title": "Media",
+    "description": "Håll dig uppdaterad med våra senaste nyheter, insikter och tankeledarskapsinnehåll.",
+    "blogs": "Bloggar",
+    "videos": "Videor"
+  },
+  "aiobz": {
+    "title": "AI OBZ",
+    "subtitle": "Prediktiv observerbarhetsplattform",
+    "description": "AI-driven händelsekorrelation och prediktiv analys för proaktiv IT-drift. Identifiera problem innan de påverkar användare med intelligent mönsterigenkänning och automatiserad rotorsaksanalys.",
+    "highlights": {
+      "aiPowered": "AI-driven",
+      "predictiveAnalytics": "Prediktiv analys",
+      "realTimeInsights": "Insikter i realtid",
+      "proactiveOperations": "Proaktiv drift"
+    },
+    "whatToExpect": "Vad du kan förvänta dig",
+    "whatToExpectDesc": "AI OBZ kommer att revolutionera hur du övervakar och hanterar IT-drift med banbrytande AI-funktioner",
+    "features": [
+      { "title": "AI-driven händelsekorrelation", "description": "Intelligent mönsterigenkänning som kopplar samman relaterade händelser i hela din IT-infrastruktur." },
+      { "title": "Prediktiv problemdetektering", "description": "Identifiera potentiella problem innan de påverkar användare med maskininlärningsdrivna förutsägelser." },
+      { "title": "Automatiserad rotorsaksanalys", "description": "Identifiera snabbt källan till problem med AI-assisterade diagnostiska funktioner." },
+      { "title": "Dataintegrering från flera källor", "description": "Aggregera och analysera data från loggar, mätvärden, spårningar och händelser i en enhetlig plattform." },
+      { "title": "Anomalidetektering och larm", "description": "Smart larm som minskar brus och belyser det som verkligen spelar roll." },
+      { "title": "Prestandatrendanalys", "description": "Visualisera trender och prognostisera kapacitetsbehov med avancerad analys." }
+    ],
+    "futureTitle": "Framtiden för IT-observerbarhet",
+    "futureDesc": "Traditionell övervakning är reaktiv — du får reda på problem efter att de har inträffat. AI OBZ vänder detta paradigm genom att använda artificiell intelligens för att förutsäga problem, korrelera händelser i hela din stack och tillhandahålla handlingsbara insikter innan incidenter påverkar din verksamhet.",
+    "reductionNoise": "Minskning av larmbuller",
+    "fasterRCA": "Snabbare rotorsaksanalys",
+    "fewerIncidents": "Färre incidenter",
+    "ctaTitle": "Redo att utforska AI-observerbarhetens värld",
+    "ctaDesc": "Kontakta oss för att lära dig mer om AI OBZ"
+  },
+  "identityMgmt": {
+    "badge": "Identitetshantering",
+    "title": "Zero-Touch användarlivscykel och säker IT-administration",
+    "description": "Ett enda gränssnitt för säker, delegerad daglig IT-administration. Automatisera hela identitetslivscykeln samtidigt som policyer tillämpas konsekvent från onboarding till offboarding.",
+    "stat1": "70% mindre manuellt arbete",
+    "stat2": "85% snabbare personalintroduktion",
+    "stat3": "Kompletta revisionsspår",
+    "lifecycleTitle": "Intelligent automatisering genom hela livscykeln",
+    "lifecycleSubtitle": "Gränssnitt mot er HR-data och ITSM-verktyg som den enda sanningskällan",
+    "joiner": "Nyanställd",
+    "joinerSubtitle": "Zero-Touch onboarding",
+    "joinerFeatures": [
+      "Automatisera användarskapande baserat på HRMS-data och policyer",
+      "Integrera med ServiceNow för att validera förfrågningar",
+      "Provisionera grundläggande åtkomst baserat på persona, plats och affärsenhet"
+    ],
+    "mover": "Intern flytt",
+    "moverSubtitle": "Dynamisk åtkomstkontroll",
+    "moverFeatures": [
+      "Personaändringskontroll: Automatisk partiell åtkomståterkallelse",
+      "Detektion av överflödig åtkomst: Granska persona vs faktisk åtkomst",
+      "Tillämpa principen om minsta behörighet kontinuerligt"
+    ],
+    "leaver": "Avgående",
+    "leaverSubtitle": "Säker och granskningsbar offboarding",
+    "leaverFeatures": [
+      "Snabb återkallelse av all åtkomst, synkroniserad med HR-register",
+      "Hantera massavboarding vid M&A eller leverantörsprojekt",
+      "Komplett revisionsspår över alla åtkomständringar"
+    ],
+    "comprehensiveTitle": "Omfattande identitetslösningar",
+    "centralizedTitle": "Centraliserad IT Control Box",
+    "centralizedDesc": "En \"single pane of glass\" för ert supportteam, integrerad direkt i Microsoft Teams. Automatiserar operativa uppgifter och minskar behovet av privilegierade administratörskonton.",
+    "centralizedFeatures": ["Lösenordsåterställning", "Lås upp konto", "Återställ MFA", "Lägg till i AD-grupper", "Ändra visningsnamn", "Tilldela O365-licens", "Hämta BitLocker-nyckel", "Ställ in e-postvidarebefordran"],
+    "lapsTitle": "LAPS - Local Admin Password Solution",
+    "lapsDesc": "Eliminera stående lokala administratörsprivilegier på slutpunkter. Använder CrowdStrike API:er eller Intune-skript för att automatiskt rotera lokala administratörslösenord månadsvis — ingen ytterligare agent krävs.",
+    "lapsFeatures": [
+      "Agentlös lösenordsrotation via CrowdStrike eller Intune",
+      "4K-certifikatkryptering för säker lagring",
+      "Säker Teams-app för lösenordshämtning vid behov",
+      "Automatisk lösenordsändring inom 4 timmar efter åtkomst",
+      "Proaktiv slutpunktsintelligens och hälsoövervakning"
+    ],
+    "igaTitle": "Identity Governance & Administration (IGA)",
+    "igaDesc": "Omfattande rapportering och snabba svarsfunktioner för proaktiv säkerhetshantering.",
+    "igaFeatures": [
+      "Identitetsundantagsrapport: Synkroniseringsluckor, inaktiva användare, policyundantag",
+      "Identitetskarantän: Inaktivera ID omedelbart i AD, Azure och appar",
+      "Automatiserad hotrespons: Lösenordsåterställning, tvingad utloggning, MFA — inget E5 krävs",
+      "Automatiserad värdnamnsåtervinning i AD, Azure och Intune"
+    ],
+    "complianceTitle": "Efterlevnadsrevision och rapportering",
+    "complianceDesc": "Upprätthåll ett komplett, granskningsbart spår av alla administrativa aktiviteter för full spårbarhet.",
+    "complianceFeatures": [
+      "Spåra och rapportera alla åtkomständringar per identitet",
+      "Upptäck interna utnyttjanden med livscykelgranskning av åtkomst",
+      "Godkännandeaktivering med kostnadseffektsynlighet",
+      "CIS, NIST, ISO27001 efterlevnadsramverk"
+    ],
+    "benefitsTitle": "Fördelar för din organisation",
+    "forLeadership": "För ledning och CISO",
+    "forLeadershipDesc": "Förbättrad styrning, minskad risk, accelererad incidentrespons",
+    "forITManagers": "För IT-chefer",
+    "forITManagersDesc": "Ökad effektivitet, snabbare teamintroduktion, kostnadsoptimering",
+    "forITSupport": "För IT-support",
+    "forITSupportDesc": "Single pane of glass, bemyndigad junior personal, snabbare felsökning",
+    "forEndUsers": "För slutanvändare",
+    "forEndUsersDesc": "Snabbare lösningar, självbetjäningsfunktioner, sömlös upplevelse",
+    "ctaTitle": "Redo att transformera din identitetshantering?",
+    "ctaDesc": "Se hur vår identitetsautomatisering kan effektivisera din IT-verksamhet"
+  },
+  "deviceMgmt": {
+    "badge": "Enhetshantering",
+    "title": "Driftsätt säkra, standardiserade slutpunkter på minuter, inte dagar",
+    "description": "Driftsätt en konsekvent, säker och fullt konfigurerad Windows-miljö på all hårdvara. Vår SOE-lösning använder en enda universell avbildning som möjliggör massdriftsättning på distans utan att IT-kompetens krävs.",
+    "stat1": "Universell Windows 11-avbildning",
+    "stat2": "HP, Dell, Lenovo-stöd",
+    "stat3": "CIS/NIST/ISO27001-härdad",
+    "refCase": "Global läkemedelsreferens - Storbritannien, USA, Indien",
+    "totalDeployed": "Totalt driftsatta system",
+    "manHoursSaved": "Mantimmar sparade",
+    "configConsistency": "Konfigurationskonsekvens",
+    "enterpriseTitle": "Företagets enhetslösningar",
+    "soeTitle": "Universell Windows 11 SOE-avbildning",
+    "soeDesc": "En enda Windows 11-avbildning stöder all hårdvara (HP, Dell, Lenovo) och affärsenheter, med anpassade appar som distribueras automatiskt. Inga separata avbildningar att underhålla.",
+    "soeFeatures": [
+      "En avbildning för alla hårdvaruleverantörer och modeller",
+      "Anpassade appar distribueras automatiskt per affärsenhet",
+      "Automatiserad driverinjektion för 20+ hårdvarumodeller",
+      "Anpassningsbar men repeterbar baserat på geografi och roll"
+    ],
+    "hardeningTitle": "Säkerhetshärdning",
+    "hardeningDesc": "Implementerar branschens bästa praxis som CIS, NIST och ISO27001-ramverk, inaktiverar sårbara tjänster och tillämpar policyer från driftsättning.",
+    "hardeningFeatures": [
+      "CIS Nivå 1 och Nivå 2 riktmärkestillämpning",
+      "NIST 800-53 och ISO27001 säkerhetskontroller",
+      "Automatisk aktivering av BitLocker-kryptering",
+      "Sårbara tjänster inaktiverade som standard"
+    ],
+    "zeroTouchTitle": "Zero-Touch-driftsättning",
+    "zeroTouchDesc": "Fungerar med MDT eller SCCM för att leverera en tyst, helt automatiserad installation via nätverk eller USB för fjärranläggningar. System ansluts automatiskt till AD eller Azure AD.",
+    "zeroTouchFeatures": [
+      "Tyst, helt automatiserad installation — ingen användarinteraktion",
+      "Nätverks-PXE-start eller USB-driftsättning för fjärranläggningar",
+      "Automatisk domänanslutning till AD eller Azure AD",
+      "Praktiskt taget ingen IT-kompetens krävs på fjärranläggningar"
+    ],
+    "lapsTitle": "LAPS-integration",
+    "lapsDesc": "Eliminera stående lokala administratörsprivilegier på alla driftsatta slutpunkter med integrerad Local Admin Password Solution för komplett slutpunktssäkerhet.",
+    "lapsFeatures": [
+      "Automatisk lösenordsrotation på driftsatta system",
+      "4K-certifikatkryptering för lösenordslagring",
+      "Säker åtkomst vid behov via Microsoft Teams",
+      "Komplett revisionsspår för efterlevnad"
+    ],
+    "ctaTitle": "Redo att skala din enhetsdriftsättning?",
+    "ctaDesc": "Se hur vår enhetshanteringsautomatisering kan transformera din Windows-driftsättning"
+  },
+  "o365Mgmt": {
+    "badge": "O365-licenshantering",
+    "title": "Eliminera licensslöseri och tillämpa ansvarsskyldighet",
+    "description": "Att hantera tusentals användare över flera O365 SKU:er (E1, E3, E5, Project) är en stor utmaning. Vårt automatiserade system ger en realtids, exakt inventering som gör det möjligt att sluta överbetala och fördela kostnader tillbaka till verksamheten.",
+    "stat1": "Licensspårning i realtid",
+    "stat2": "Kostnadsansvar",
+    "stat3": "Automatisk återkallelse",
+    "refCase": "Global läkemedelsreferens - Europa & Indien",
+    "personaAllocation": "Persona-baserad tilldelning",
+    "personaAllocationDesc": "Tilldela dynamiskt rätt licens baserat på avdelning, roll eller plats",
+    "shortTermMgmt": "Korttidshantering",
+    "shortTermMgmtDesc": "Automatisera tilldelning och återkallelse av tillfälliga licenser",
+    "costAccountability": "Kostnadsansvar",
+    "costAccountabilityDesc": "Spåra och rapportera användning per affärsgrupp med automatiserade e-postmeddelanden",
+    "optimizationInsights": "Optimeringsinsikter",
+    "optimizationInsightsDesc": "Identifiera överutnyttjade SKU:er och oanvända licenser på inaktiverade konton",
+    "completeControl": "Komplett O365-licenskontroll",
+    "realTimeSummaryTitle": "Licenssammanfattning i realtid",
+    "realTimeSummaryDesc": "Klarhet vid en blick: Spåra anskaffade vs. använda licenser över alla SKU:er inklusive E1, E3, E5, EMS E3, M365 F1, F3 och fler. Vet exakt var dina licenser finns och vem som använder dem.",
+    "realTimeSummaryFeatures": [
+      "Live-instrumentpanel som visar anskaffade, använda och tillgängliga licenser",
+      "Användarantal per företagsnamn och division",
+      "Detektion av oanvända och underutnyttjade licenser",
+      "Identifiering av aktiva vs inaktiva användare"
+    ],
+    "costAllocationTitle": "Kostnadsfördelning per division",
+    "costAllocationDesc": "Spåra och rapportera licensanvändning per affärsgrupp med automatiserade veckovisa e-postmeddelanden till intressenter. Möjliggör korrekta internfakturering och kostnadsansvar i hela organisationen.",
+    "costAllocationFeatures": [
+      "Avdelningsvis uppdelning av licensanvändning",
+      "Kostnadsställefördelning och internfaktureringsrapportering",
+      "Automatiserade veckovisa intressentrapporter via e-post",
+      "Export till Excel, PDF och CSV-format"
+    ],
+    "personaAssignTitle": "Persona-baserad licenstilldelning",
+    "personaAssignDesc": "Tilldela dynamiskt rätt licens baserat på avdelning, roll eller plats. Minska överprovisionering och säkerställ att användare får exakt vad de behöver.",
+    "personaAssignFeatures": [
+      "Rollbaserad automatisering av licenstilldelning",
+      "Plats- och avdelningsmedveten provisionering",
+      "Godkännandeaktivering med kostnadseffektsynlighet",
+      "Hantering av tjänstekonton för kostnadsreduktion"
+    ],
+    "shortTermTitle": "Korttidslicenshantering",
+    "shortTermDesc": "Automatisera tilldelning och, avgörande, återkallelse av tillfälliga licenser för att eliminera slöseri. Inga fler bortglömda tillfälliga tilldelningar som ackumulerar kostnader.",
+    "shortTermFeatures": [
+      "Tidsbegränsade licenstilldelningar med automatisk utgång",
+      "Automatisk återkallelse av tillfälliga licenser",
+      "Konsult- och leverantörslicenshantering",
+      "Projektbaserad licenstilldelning och spårning"
+    ],
+    "ctaTitle": "Redo att optimera dina O365-kostnader?",
+    "ctaDesc": "Se hur vår licenshantering kan hjälpa dig att eliminera slöseri och tillämpa ansvarsskyldighet"
+  },
+  "itamAlt": {
+    "heroTitle1": "Den moderna grunden för",
+    "heroTitle2": "IT-framgång",
+    "heroDesc": "Omfattande IT Asset Management, hybridupptäckt och automatiserad CMDB — utformad för mellanmarknaden.",
+    "frictionTitle": "Friktionen i modern IT-drift",
+    "frictionDesc": "Enterprise Management Associates (EMA) avslöjar att realtidsupptäckt och CMDB-mognad är de kritiska nycklarna till ServiceOps-framgång. Att förlita sig på manuella kalkylblad eller fragmenterade punktlösningar leder till felaktig data, uppblåsta programvarukostnader och allvarliga säkerhetsluckor.",
+    "blueprintTitle": "En värdedriven modulär ritning",
+    "blueprintDesc": "Fyra sammankopplade moduler som samverkar för att leverera komplett IT-synlighet.",
+    "businessValueTitle": "Översätta funktioner till affärsverkligheter",
+    "integrationsTitle": "Gränslösa integrationsmöjligheter",
+    "integrationsDesc": "Samverkar med ditt befintliga ekosystem. Ingen leverantörslåsning.",
+    "kvpTitle": "Viktiga värdeerbjudanden",
+    "kvpDesc": "Agil, skalbar men enkel och effektiv.",
+    "ctaTitle": "Sluta hantera tillgångar i blindo",
+    "ctaDesc": "Uppnå total synlighet, säkerställ orubblig efterlevnad och bygg en konfigurationsgrund du faktiskt kan lita på.",
+    "problems": [
+      { "problem": "Blinda fläckar i hybrid- och WFA-miljöer.", "solution": "Automatiserad, agentlös och agentbaserad kontinuerlig upptäckt." },
+      { "problem": "Hög felfrekvens vid manuella CMDB-uppdateringar.", "solution": "ITIL-kompatibel, automatiskt befolkad enda sanningskälla." },
+      { "problem": "Oavsiktliga avbrott från rutinmässiga nätverksändringar.", "solution": "Dynamisk beroendekartering med ITSM-ändringskollisionsöverlägg." },
+      { "problem": "Slösat utgifter på oanvända programvarulicenser.", "solution": "Detaljerad programvarumätning och livscykelhantering." }
+    ],
+    "modules": [
+      {
+        "title": "Hybrid IT-upptäckt",
+        "tagline": "Eliminera blinda fläckar i hela din egendom.",
+        "features": [
+          { "title": "Agentlös och API-driven", "desc": "Över 140 utbyggbara sonder för moln (AWS, Azure), hypervisorer och datacenter." },
+          { "title": "Work-From-Anywhere (WFA)", "desc": "Valfria agenter för Windows, macOS och Linux för att övervaka förändringar utanför nätverket." },
+          { "title": "Ställ-in-och-glöm-automatisering", "desc": "Skanna kontinuerligt IT-egendomen för att fånga nya tillgångar och konfigurationsändringar säkert." }
+        ]
+      },
+      {
+        "title": "Automatiserad CMDB",
+        "tagline": "En orörd, ITIL-kompatibel enda sanningskälla.",
+        "features": [
+          { "title": "Intelligent automatisering", "desc": "Detaljerade affärsregler för att automatisera befordran av CI-uppdateringar." },
+          { "title": "Full schemaflexibilitet", "desc": "Spåra hundratals hårdvaru-, programvaru- och IoT-konfigurationsattribut." },
+          { "title": "Faktabaserade beslut", "desc": "Upprätthåll komplett CI-historik och versionshantering för att eliminera gissningarna som driver IT-drift." }
+        ]
+      },
+      {
+        "title": "ITAM-beroendekartan",
+        "tagline": "Dynamiska visuella representationer av affärstjänstberoenden.",
+        "features": [
+          { "title": "Konsekvensanalys", "desc": "Svara omedelbart: Vilken riskexponering finns vid denna ändring? Vilka är intressenterna?" },
+          { "title": "Heads-Up Display", "desc": "Lägger ITSM-incident- och ändringsregister direkt ovanpå infrastrukturkartan." },
+          { "title": "Rotorsaksidentifiering", "desc": "Spåra visuellt beroenden för att förbättra MTBF och MTTR." }
+        ]
+      },
+      {
+        "title": "Tillgångslivscykel och licenshantering",
+        "tagline": "Förbli revisionsbeständig samtidigt som kostnader minimeras.",
+        "features": [
+          { "title": "End-to-end-spårning", "desc": "Hantera hårdvara och programvara från inköp till avveckling." },
+          { "title": "Programvarumätning", "desc": "Spåra faktisk programvaruanvändning för att identifiera och återta underutnyttjade licenser." },
+          { "title": "Leverantörs- och kontraktshantering", "desc": "Automatiska garantiuppslag och proaktiv hantering av SLA:er och förnyelser." }
+        ]
+      }
+    ],
+    "differentiators": [
+      { "title": "Autonomisk social upptäckt", "desc": "Genererar automatiskt flerkanaluppgifter för att samla in data som maskiner inte kan skanna — SLA:er, ägande, EOL-status, affärspolicyer. Systemet lär sig vem i organisationen som är bäst lämpad att tillhandahålla specifik saknad data." },
+      { "title": "Säkerhets- och sårbarhetsöverlägg", "desc": "Inbyggd NVD-integration lägger kända sårbarheter direkt ovanpå beroendekartan. Låter SecOps identifiera vilka kritiska affärstjänster som är exponerade och prioritera patchning därefter." }
+    ],
+    "businessValue": [
+      { "title": "Operativ effektivitet", "metric": "Automatiserad upptäckt + CMDB", "desc": "Minskar manuell datainmatning med tusentals timmar, sänker OpEx." },
+      { "title": "Användarproduktivitet", "metric": "Beroendekartering", "desc": "Förhindrar ändringskollisioner, minskar kraftigt oplanerad driftstopp och MTTR." },
+      { "title": "Cybersäkerhet och efterlevnad", "metric": "NVD-överlägg + licensmätning", "desc": "Härdar attackytan och eliminerar oväntade programvarurevisionsstraff." }
+    ],
+    "integrations": [
+      { "category": "ITSM-plattformar", "items": ["ServiceNow", "Jira"] },
+      { "category": "Moln och virtualisering", "items": ["AWS", "Microsoft Azure", "VMware"] },
+      { "category": "Säkerhet och IAM", "items": ["Okta", "PingIdentity", "CyberArk"] }
+    ],
+    "midMarket": [
+      { "title": "Snabb tid-till-värde", "desc": "Enkel att driftsätta SaaS-arkitektur med AWS-hosting i flera regioner. Börja se kartlagda tillgångar på dagar, inte månader." },
+      { "title": "Låg total ägandekostnad", "desc": "Förutsägbar prismodell utan dolda integrationsavgifter." },
+      { "title": "Byggd för smala team", "desc": "Intelligent automatisering fungerar som en kraftmultiplikator för IT-personal, frigör dem från kalkylblad för att fokusera på strategisk ServiceOps." }
+    ]
+  },
+  "greenitcoItam": {
+    "title": "ITAM IT Asset Management",
+    "subtitle": "Intelligent plattform för tillgångsupptäckt och livscykelhantering",
+    "highlights": {
+      "fasterAudits": "80% snabbare revisioner",
+      "costReduction": "30% kostnadsreduktion",
+      "compliance": "100% efterlevnad",
+      "aiAutomation": "AI-driven automatisering"
+    },
+    "suiteTitle": "Omfattande tillgångshanteringssvit",
+    "suiteDesc": "Från automatiserad upptäckt till intelligent servicedesk, hantera hela din IT-infrastruktur med en enhetlig plattform",
+    "features": [
+      { "title": "Komplett tillgångslivscykel", "description": "Spåra IT- och icke-IT-tillgångar från inköp till avyttring med omfattande livscykelhantering.", "highlights": ["Streckkod & RFID", "Tillgångsmärkning", "Avskrivningsspårning"] },
+      { "title": "Automatisk nätverksupptäckt", "description": "Agent och agentlös upptäckt av alla nätverksenheter inklusive Windows, Linux, Apple, IoT-enheter och molnresurser.", "highlights": ["Realtidsupptäckt", "AD-integration", "Molninventering"] },
+      { "title": "Licenshantering", "description": "Optimera programvarulicenskostnader och spåra licensefterlevnad med automatiserad övervakning och larm.", "highlights": ["Användningsspårning", "Utgångslarm", "Kostnadsoptimering"] },
+      { "title": "Inköpshantering", "description": "Effektivisera inköpsordrar, leverantörsbudgivning, budgetspårning och godkännandearbetsflöden.", "highlights": ["Leverantörshantering", "IO-skapande", "Budgetkontroll"] },
+      { "title": "Intelligent servicedesk", "description": "ITIL-redo servicedesk med AI-driven ärendeautomatisering, SLA-hantering och stöd via flera kanaler.", "highlights": ["BOT-integration", "Automatisk tilldelning", "Mobilapp"] },
+      { "title": "Konfigurationshantering", "description": "Upprätthåll korrekt CMDB med automatiserade uppdateringar, ändringshantering och konsekvensanalys.", "highlights": ["CMDB", "Ändringsspårning", "Konsekvensanalys"] }
+    ],
+    "itam2Title": "Vi presenterar ITAM",
+    "itam2Desc": "Revolutionärt steg framåt inom intelligent uppgiftshantering med avancerad automatisering",
+    "itam2Features": [
+      "Sömlös programvarudistribution",
+      "Avancerad patchhantering",
+      "Dynamisk Kanban-tavla",
+      "Meddelandemodul",
+      "Leverantörsbudgivning",
+      "Integrerad samtalsinspelning och ärendeskapande"
+    ],
+    "techCapabilitiesTitle": "Tekniska förmågor",
+    "techCapabilitiesDesc": "Företagsanpassade funktioner för omfattande IT-driftshantering",
+    "techSections": [
+      { "category": "Tillgångshantering", "items": ["IT- och icke-IT-tillgångsspårning", "Streckkods- och RFID-märkning", "Automatisk upptäckt", "Platskartläggning", "Tillfällig tillgångstilldelning", "Tillgångs-AMC och underhåll", "Garantihantering", "Tillgångsrevision och historik", "Dokumenthantering", "Tröskelhantering"] },
+      { "category": "Nätverksupptäckt", "items": ["Agent och agentlös upptäckt", "Windows, Linux, Apple-system", "Active Directory-integration", "Programvaruinventering", "Skrivare, kameror, routrar", "IoT-enheter och Smart TV", "Virtuella maskiner", "Molninventering (Azure)", "USB- och minnesstickedetektering", "Fjärrskrivbord (RDP)"] },
+      { "category": "Servicedesk", "items": ["Omnikanalsärendehantering", "Automatisk ärendegenerering", "SLA-hantering", "Kunskapsbas (offentlig/privat)", "Feedbackhantering", "Arbetsflödesautomatisering", "API-integration", "IVR-integration"] },
+      { "category": "Efterlevnad och säkerhet", "items": ["ISO 27001 och ISO 55001", "ITIL-standarder", "SOX- och GDPR-kompatibel", "Revisionsspår och historik", "Rollbaserad åtkomstkontroll", "Stöd för flera företag", "Konfigurationshanteringsdatabas", "Ändringshantering"] }
+    ],
+    "complianceTitle": "Efterlevnadsredo",
+    "complianceDesc": "Inbyggt stöd för viktiga efterlevnadsstandarder och regulatoriska ramverk",
+    "mobileTitle": "Mobilapp för hantering på språng",
+    "mobileDesc": "Spåra tillgångar, skapa ärenden och hantera din IT-infrastruktur var som helst med vår kraftfulla mobilapplikation"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Hoppsan! Sidan hittades inte",
+    "returnHome": "Tillbaka till startsidan"
+  },
+  "seo": {
+    "home": {
+      "title": "IT Kontroll Box (IT Control Box) | IT-automatisering | AIObz",
+      "description": "IT Kontroll Box — automatisera identitets-, enhets- och O365-hantering. Minska manuellt arbete med 80% genom intelligent IT-automatisering i företagsklass."
+    },
+    "products": {
+      "title": "Produkter | IT Kontroll Box, ITAM & AI OBZ | AIObz",
+      "description": "Utforska AIObz:s produktsvit: IT Kontroll Box (IT Control Box) för IT-automatisering, ITAM för livscykelhantering av tillgångar och AI OBZ för prediktiv observerbarhet."
+    },
+    "itam": {
+      "title": "IT-tillgångshantering (ITAM) | AIObz",
+      "description": "Intelligent IT-tillgångshantering med automatisk upptäckt, livscykelspårning, efterlevnadsrapportering och kostnadsoptimering."
+    },
+    "aiObz": {
+      "title": "AI OBZ | AI-driven prediktiv observerbarhet | AIObz",
+      "description": "AI-driven observerbarhetsplattform med prediktiv analys, anomalidetektering och infrastrukturövervakning i realtid."
+    },
+    "identity": {
+      "title": "Identitetshantering | IT Kontroll Box | AIObz",
+      "description": "Automatisera hela identitetslivscykeln med IT Kontroll Box — onboarding, rollbyten, offboarding med zero-touch-provisionering och revisionsredo efterlevnad."
+    },
+    "device": {
+      "title": "Enhetshantering | IT Kontroll Box | AIObz",
+      "description": "Slutpunktshantering med IT Kontroll Box — SOE-distribution, säkerhetshärdning, zero-touch-provisionering och LAPS-integration."
+    },
+    "o365": {
+      "title": "O365-licenshantering | IT Kontroll Box | AIObz",
+      "description": "Optimera Microsoft 365-licenskostnader med IT Kontroll Box — användningsanalys i realtid, personabaserad tilldelning och automatiserad kostnadsansvarighet."
+    },
+    "aboutUs": {
+      "title": "Om oss | AIObz Consulting",
+      "description": "Lär dig mer om AIObz Consulting — teamet bakom IT Kontroll Box, ITAM och AI OBZ:s plattformar för företagsautomatisering."
+    },
+    "successStories": {
+      "title": "Framgångshistorier | AIObz",
+      "description": "Se hur företag minskade kostnader och förbättrade effektiviteten med IT Kontroll Box, ITAM och AI OBZ."
+    },
+    "media": {
+      "title": "Media & resurser | AIObz",
+      "description": "Videor, artiklar och resurser om IT-automatisering, tillgångshantering och AI-driven observerbarhet från AIObz."
+    },
+    "contact": {
+      "title": "Kontakta oss | AIObz",
+      "description": "Kontakta AIObz för en demo, konsultation eller partnerskapsförfrågan om IT Kontroll Box, ITAM eller AI OBZ."
+    },
+    "assessment": {
+      "title": "IT-mognadsbedömning | IT Kontroll Box | AIObz",
+      "description": "Gör vår kostnadsfria IT-mognadsbedömning för att utvärdera din organisations automationsberedskap och få personliga rekommendationer."
+    },
+    "itAssetMgmt": {
+      "title": "IT-tillgångshantering | Greenitco ITAM | AIObz",
+      "description": "Omfattande IT-tillgångshantering med upptäckt, CMDB, beroendekartläggning och livscykelautomatisering."
+    },
+    "datasheet": {
+      "title": "IT Kontroll Box datablad | AIObz",
+      "description": "Ladda ner IT Kontroll Box-databladet — detaljerade specifikationer för IT-automatisering i företagsklass."
+    },
+    "cognitia": {
+      "title": "Cognitia — Affärscentrerad IT-intelligens | AIObz",
+      "description": "Cognitia kombinerar Virima-upptäckt och ServiceNow till en affärsprocessvy av din IT-infrastruktur. Få din tjänstekarta inom 24 timmar."
+    }
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad: 10 mars 2026",
+    "s1Title": "1. Introduktion",
+    "s1p1": "AIObz Consulting (\"vi\", \"vår\" eller \"oss\") är engagerade i att skydda integriteten och säkerheten för dina personuppgifter. Denna integritetspolicy förklarar hur vi samlar in, använder, lagrar och skyddar din personliga information i enlighet med den allmänna dataskyddsförordningen (GDPR - EU 2016/679), den svenska dataskyddslagen (Dataskyddslag 2018:218) och andra tillämpliga europeiska dataskyddslagar.",
+    "s1p2": "Denna policy gäller alla besökare på vår webbplats, användare av våra produkter (IT Control Box, ITAM, AI OBZ) och personer som interagerar med oss via kontaktformulär, bedömningar eller annan kommunikation.",
+    "s2Title": "2. Personuppgiftsansvarig",
+    "s2p1": "AIObz Consulting är personuppgiftsansvarig för de personuppgifter som behandlas via denna webbplats och våra tjänster. För frågor om dataskydd, vänligen kontakta oss på:",
+    "s3Title": "3. Personuppgifter vi samlar in",
+    "s3p1": "Vi kan samla in följande kategorier av personuppgifter:",
+    "s3Contact": "Kontaktinformation:",
+    "s3ContactDesc": "Namn, e-postadress, telefonnummer, organisationsnamn — som tillhandahålls när du fyller i kontaktformulär, databladsbegäranden eller bedömningar.",
+    "s3Usage": "Användningsdata:",
+    "s3UsageDesc": "Besökta sidor, webbläsartyp, enhetsinformation, IP-adress och interaktionsmönster som samlas in via analys.",
+    "s3Assessment": "Bedömningsdata:",
+    "s3AssessmentDesc": "Svar som ges genom vårt IT-mognadsbedömningsverktyg, inklusive valda områden, svar och beräknade resultat.",
+    "s3Communication": "Kommunikationsdata:",
+    "s3CommunicationDesc": "Register över korrespondens när du kontaktar oss.",
+    "s4Title": "4. Rättslig grund för behandling (GDPR Art. 6)",
+    "s4p1": "Vi behandlar dina personuppgifter baserat på följande rättsliga grunder:",
+    "s4Consent": "Samtycke (Art. 6(1)(a)):",
+    "s4ConsentDesc": "När du frivilligt skickar in formulär eller prenumererar på kommunikation. Du kan återkalla ditt samtycke när som helst.",
+    "s4Legitimate": "Berättigat intresse (Art. 6(1)(f)):",
+    "s4LegitimateDesc": "För webbplatsanalys, förbättring av våra tjänster och för att svara på förfrågningar.",
+    "s4Contract": "Avtalsmässig nödvändighet (Art. 6(1)(b)):",
+    "s4ContractDesc": "När behandling är nödvändig för att fullgöra eller förbereda ett avtal med dig.",
+    "s4Legal": "Rättslig förpliktelse (Art. 6(1)(c)):",
+    "s4LegalDesc": "Där det krävs enligt tillämplig lag.",
+    "s5Title": "5. Hur vi använder dina uppgifter",
+    "s5i1": "För att svara på dina förfrågningar och tillhandahålla begärd information",
+    "s5i2": "För att behandla databladsnedladdningar och bedömningsinlämningar",
+    "s5i3": "För att förbättra vår webbplats, produkter och tjänster",
+    "s5i4": "För att skicka relevant kommunikation (endast med ditt samtycke)",
+    "s5i5": "För att uppfylla rättsliga förpliktelser",
+    "s6Title": "6. Datalagring",
+    "s6p1": "Vi behåller personuppgifter bara så länge som nödvändigt för att uppfylla de syften för vilka de samlades in, eller enligt lag. Kontaktformulärsinlämningar och bedömningsdata behålls i maximalt 24 månader om inte en längre lagringsperiod krävs enligt lag eller en pågående affärsrelation.",
+    "s7Title": "7. Datadelning och överföringar",
+    "s7p1": "Vi säljer inte dina personuppgifter. Vi kan dela data med:",
+    "s7Service": "Tjänsteleverantörer:",
+    "s7ServiceDesc": "Betrodda tredjepartsleverantörer som hjälper till med hosting, analys och e-postleverans, bundna av personuppgiftsbiträdesavtal.",
+    "s7Legal": "Rättsliga myndigheter:",
+    "s7LegalDesc": "När det krävs enligt lag eller för att skydda våra lagliga rättigheter.",
+    "s7p2": "Där data överförs utanför EU/EES säkerställer vi att lämpliga skyddsåtgärder finns på plats, såsom standardavtalsklausuler (SCC) eller adekvansbeslutar från Europeiska kommissionen.",
+    "s8Title": "8. Cookies",
+    "s8p1": "Vår webbplats använder nödvändiga cookies för att säkerställa grundläggande funktionalitet. Vi kan också använda analyser-cookies för att förstå hur besökare interagerar med vår webbplats. Du kan hantera cookie-inställningar via din webbläsares inställningar. För detaljerad information, se våra cookie-inställningar vid första besöket.",
+    "s9Title": "9. Datasäkerhet",
+    "s9p1": "Vi implementerar lämpliga tekniska och organisatoriska åtgärder för att skydda dina personuppgifter mot obehörig åtkomst, ändring, avslöjande eller förstöring. Dessa inkluderar kryptering under överföring (TLS/SSL), åtkomstkontroller och regelbundna säkerhetsgranskningar.",
+    "s10Title": "10. Ändringar av denna policy",
+    "s10p1": "Vi kan uppdatera denna integritetspolicy från tid till annan. Eventuella ändringar publiceras på denna sida med ett uppdaterat \"Senast uppdaterad\"-datum. Vi uppmuntrar dig att granska denna policy regelbundet.",
+    "disclaimer": "Ansvarsfriskrivning: Alla uttalanden på denna sida och i rapporten är vägledande och föremål för villkor och avtalsöverenskommelse. Ingen förpliktelse föreligger om det inte uttryckligen överenskommits i ett juridiskt bindande avtal."
+  },
+  "terms": {
+    "title": "Allmänna villkor",
+    "lastUpdated": "Senast uppdaterad: 10 mars 2026",
+    "s1Title": "1. Allmänt",
+    "s1p1": "Dessa allmänna villkor (\"Villkor\") reglerar din åtkomst till och användning av webbplatsen, produkterna och tjänsterna som tillhandahålls av AIObz Consulting (\"vi\", \"vår\" eller \"oss\"). Genom att besöka vår webbplats eller använda våra tjänster godkänner du dessa villkor. Om du inte godkänner, vänligen använd inte våra tjänster.",
+    "s2Title": "2. Tjänster",
+    "s2p1": "AIObz Consulting tillhandahåller programvaruprodukter för IT-automatisering i företagsklass, inklusive IT Control Box, IT Asset Management (ITAM) och AI OBZ. Våra tjänster inkluderar programvarulicensiering, implementering och relaterade konsulttjänster enligt individuella avtal.",
+    "s3Title": "3. Immateriella rättigheter",
+    "s3p1": "Allt innehåll, programvara, varumärken, logotyper och material på denna webbplats och i våra produkter är immateriell egendom tillhörande AIObz Consulting eller dess licensgivare. Ingen del av detta innehåll får reproduceras, distribueras eller överföras utan föregående skriftligt tillstånd.",
+    "s3p2": "Våra programvaruprodukter licensieras, inte säljs. De specifika villkoren för varje programvarulicens definieras i det tillämpliga programvarulicensavtalet som tillhandahålls kunder.",
+    "s4Title": "4. Användarens skyldigheter",
+    "s4p1": "När du använder vår webbplats och våra tjänster, godkänner du att:",
+    "s4i1": "Tillhandahålla korrekt och fullständig information vid inlämning av formulär eller registrering för tjänster",
+    "s4i2": "Inte använda våra tjänster för olagliga eller obehöriga ändamål",
+    "s4i3": "Inte försöka störa, äventyra eller avbryta våra system eller säkerhet",
+    "s4i4": "Inte bakåtkompilera, dekompilera eller demontera någon av våra programvaruprodukter",
+    "s4i5": "Följa alla tillämpliga lokala, nationella och internationella lagar och förordningar",
+    "s5Title": "5. Prissättning och betalningar",
+    "s5p1": "Våra produkter följer en modell utan återkommande avgifter. Specifik prissättning, betalningsvillkor och leverabler definieras i individuella kommersiella avtal. Alla priser som anges på vår webbplats eller i förslag är vägledande och föremål för villkoren i ett signerat avtal.",
+    "s6Title": "6. Ansvarsbegränsning",
+    "s6p1": "I den utsträckning som tillåts av tillämplig europeisk lag:",
+    "s6i1": "Vår webbplats och dess innehåll tillhandahålls \"i befintligt skick\" utan garantier av något slag, varken uttryckliga eller underförstådda.",
+    "s6i2": "Vi ska inte hållas ansvariga för indirekta, tillfälliga, följdskador eller straffskador som uppstår från din användning av vår webbplats eller våra tjänster.",
+    "s6i3": "Vårt totala ansvar under något krav ska inte överstiga de belopp du betalat enligt det tillämpliga avtalet under de 12 månaderna före kravet.",
+    "s6i4": "Bedömningsresultat och rapporter som tillhandahålls via vår webbplats är vägledande och enbart i informationssyfte.",
+    "s7Title": "7. Dataskydd",
+    "s7p1": "Vi behandlar personuppgifter i enlighet med den allmänna dataskyddsförordningen (GDPR) och vår",
+    "s7PrivacyLink": "Integritetspolicy",
+    "s7p1b": "Genom att använda våra tjänster bekräftar du att du har läst och förstått vår integritetspolicy.",
+    "s7p2": "För företagskunder regleras villkoren för databehandling av ett separat personuppgiftsbiträdesavtal (DPA) som krävs enligt GDPR artikel 28.",
+    "s8Title": "8. Sekretess",
+    "s8p1": "Båda parter åtar sig att upprätthålla sekretessen för all äganderättsligt skyddad eller känslig information som utbyts under engagemangets gång. Denna skyldighet kvarstår efter uppsägning av eventuellt avtal mellan parterna.",
+    "s9Title": "9. Tredjepartslänkar",
+    "s9p1": "Vår webbplats kan innehålla länkar till tredjepartswebbplatser. Vi ansvarar inte för innehållet, integritetsrutinerna eller tillgängligheten hos sådana externa webbplatser. Åtkomst till tredjepartslänkar sker på egen risk.",
+    "s10Title": "10. Uppsägning",
+    "s10p1": "Vi förbehåller oss rätten att stänga av eller avsluta åtkomsten till vår webbplats eller våra tjänster när som helst, utan föregående meddelande, för beteende som vi anser bryter mot dessa villkor eller är skadligt för andra användare, oss eller tredje part.",
+    "s11Title": "11. Tillämplig lag och jurisdiktion",
+    "s11p1": "Dessa villkor styrs av och tolkas i enlighet med svensk lag. Eventuella tvister som uppstår ur eller i samband med dessa villkor ska vara föremål för exklusiv jurisdiktion av svenska domstolar.",
+    "s11p2": "För konsumenter inom Europeiska unionen påverkar inget i dessa villkor dina lagstadgade rättigheter enligt tillämplig konsumentskyddslagstiftning.",
+    "s12Title": "12. Ändringar av dessa villkor",
+    "s12p1": "Vi kan revidera dessa villkor när som helst genom att uppdatera denna sida. Ändringar träder i kraft vid publicering. Fortsatt användning av vår webbplats eller våra tjänster utgör godkännande av de reviderade villkoren.",
+    "s13Title": "13. Kontakt",
+    "s13p1": "För frågor angående dessa villkor, vänligen kontakta oss på:",
+    "disclaimer": "Ansvarsfriskrivning: Alla uttalanden på denna sida och i rapporten är vägledande och föremål för villkor och avtalsöverenskommelse. Ingen förpliktelse föreligger om det inte uttryckligen överenskommits i ett juridiskt bindande avtal.",
+    "copyright": "Alla rättigheter förbehållna — © copyright AIObz Consulting"
+  },
+  "cookie": {
+    "title": "Vi värnar om din integritet",
+    "description": "Vi använder cookies och liknande tekniker för att analysera trafik och förbättra din upplevelse. Genom att klicka \"Acceptera\" samtycker du till vår användning av cookies.",
+    "accept": "Acceptera",
+    "decline": "Avvisa",
+    "privacyLink": "Integritetspolicy",
+    "lang": "sv"
+  }
+}

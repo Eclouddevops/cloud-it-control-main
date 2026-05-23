@@ -1,0 +1,135 @@
+name: Infrastructure Deploy (Terraform)
+
+# Manually triggered — provision or update AWS infrastructure for any environment.
+# Run this ONCE per environment before the first code deployment.
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment"
+        required: true
+        type: choice
+        options:
+          - dev
+          - staging
+          - uat
+          - prd
+      action:
+        description: "Terraform action"
+        required: true
+        type: choice
+        options:
+          - plan
+          - apply
+          - destroy
+        default: plan
+      aws_region:
+        description: "AWS region"
+        required: false
+        default: "us-east-1"
+
+env:
+  AWS_REGION: ${{ github.event.inputs.aws_region }}
+  TF_ENV: ${{ github.event.inputs.environment }}
+
+jobs:
+  terraform:
+    name: "Terraform ${{ github.event.inputs.action }} → ${{ github.event.inputs.environment }}"
+    runs-on: ubuntu-latest
+
+    # Use the matching GitHub Environment so secrets are scoped correctly
+    environment: ${{ github.event.inputs.environment == 'prd' && 'production' || github.event.inputs.environment }}
+
+    permissions:
+      contents: read
+      id-token: write
+
+    defaults:
+      run:
+        working-directory: terraform
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ── Terraform CLI ─────────────────────────────────────────────────────
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "~1.7"
+
+      # ── AWS credentials (environment-specific OIDC role) ──────────────────
+      - name: Configure AWS credentials (dev)
+        if: env.TF_ENV == 'dev'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_DEV }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Configure AWS credentials (staging)
+        if: env.TF_ENV == 'staging'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Configure AWS credentials (uat)
+        if: env.TF_ENV == 'uat'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_UAT }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Configure AWS credentials (prd)
+        if: env.TF_ENV == 'prd'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_PRD }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # ── Terraform init ────────────────────────────────────────────────────
+      - name: Terraform Init
+        run: |
+          terraform init \
+            -backend-config="bucket=cloud-it-control-tf-state-${{ env.TF_ENV }}" \
+            -backend-config="key=${{ env.TF_ENV }}/terraform.tfstate" \
+            -backend-config="region=${{ env.AWS_REGION }}" \
+            -backend-config="encrypt=true"
+
+      # ── Terraform validate ────────────────────────────────────────────────
+      - name: Terraform Validate
+        run: terraform validate
+
+      # ── Terraform plan ────────────────────────────────────────────────────
+      - name: Terraform Plan
+        id: plan
+        run: |
+          terraform plan \
+            -var-file="terraform.tfvars.${{ env.TF_ENV }}" \
+            -var="supabase_project_id=${{ secrets.SUPABASE_PROJECT_ID }}" \
+            -var="supabase_url=${{ secrets.VITE_SUPABASE_URL }}" \
+            -var="supabase_publishable_key=${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}" \
+            -out="tfplan-${{ env.TF_ENV }}" \
+            -no-color
+
+      # ── Terraform apply (only when action = apply) ────────────────────────
+      - name: Terraform Apply
+        if: github.event.inputs.action == 'apply'
+        run: terraform apply -auto-approve "tfplan-${{ env.TF_ENV }}"
+
+      # ── Terraform destroy (only when action = destroy) ────────────────────
+      - name: Terraform Destroy
+        if: github.event.inputs.action == 'destroy'
+        run: |
+          terraform destroy \
+            -var-file="terraform.tfvars.${{ env.TF_ENV }}" \
+            -var="supabase_project_id=${{ secrets.SUPABASE_PROJECT_ID }}" \
+            -var="supabase_url=${{ secrets.VITE_SUPABASE_URL }}" \
+            -var="supabase_publishable_key=${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}" \
+            -auto-approve
+
+      # ── Capture outputs ───────────────────────────────────────────────────
+      - name: Terraform Outputs
+        if: github.event.inputs.action == 'apply'
+        run: terraform output

@@ -1,0 +1,1030 @@
+{
+  "nav": {
+    "products": "Products",
+    "itControlBox": "IT Control Box",
+    "aboutUs": "About Us",
+    "successStories": "Success Stories",
+    "media": "Media",
+    "getStarted": "Get Started"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "unknown": "Unknown",
+    "backToHome": "Back to Home",
+    "backToSolutions": "Back to Solutions",
+    "contactUs": "Contact Us",
+    "contactSales": "Contact Sales",
+    "learnMore": "Learn More",
+    "viewDetails": "View Details",
+    "scheduleDemo": "Schedule a Demo",
+    "getStarted": "Get Started",
+    "comingSoon": "Coming Soon",
+    "exploreOtherProducts": "Explore Other Products",
+    "keyFeatures": "Key Features",
+    "keyCapabilities": "Key Capabilities",
+    "keyHighlights": "Key Highlights",
+    "theChallenge": "The Challenge",
+    "theSolution": "The Solution",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "processing": "Processing...",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "organisation": "Organisation",
+    "followUs": "Follow Us",
+    "linkedinProfile": "LinkedIn Profile",
+    "shareOnLinkedin": "Share on LinkedIn",
+    "privacyAccept": "I have read and accept the",
+    "privacyPolicyLink": "Privacy Policy",
+    "privacyRequired": "You must accept the Privacy Policy to continue."
+  },
+  "hero": {
+    "title1": "Redefining End User Support with",
+    "title2": "IT Control Box",
+    "description": "An integrated suite for management of user identity, user devices and O365 licenses. Optimize IT Ops with automation, security, costs control."
+  },
+  "productCategories": {
+    "title": "Comprehensive IT Automation",
+    "subtitle": "Three powerful solutions designed to transform your IT operations",
+    "identity": {
+      "title": "Identity Management",
+      "description": "Zero-touch, error-free user lifecycle management with secure, delegated daily IT administration from a single interface.",
+      "features": [
+        "Zero-Touch Onboarding & Offboarding from HRMS",
+        "Persona-based birthright access provisioning",
+        "Automated Local Admin Password Rotation (LAPS)",
+        "Dynamic Access Control & Excess Access Detection",
+        "Identity Quarantine for rapid incident response",
+        "Complete audit trail for all admin activities"
+      ],
+      "highlights": {
+        "securityFirst": "Security First",
+        "lessEffort": "70% Less Effort",
+        "auditReady": "Audit Ready"
+      }
+    },
+    "device": {
+      "title": "Device Management",
+      "description": "Deploy consistent, secure, and fully configured Windows environments across all hardware with zero-touch automation.",
+      "features": [
+        "Universal Windows 11 SOE for all hardware",
+        "Security hardening (CIS, NIST, ISO27001)",
+        "Zero-Touch Deployment via MDT or SCCM",
+        "Auto Domain Join to AD or Azure AD",
+        "Custom app deployment during provisioning",
+        "LAPS integration for endpoint security"
+      ],
+      "highlights": {
+        "minutesNotDays": "Minutes Not Days",
+        "secureByDefault": "Secure by Default",
+        "deployed": "15K+ Deployed"
+      }
+    },
+    "o365": {
+      "title": "O365 License Management",
+      "description": "Control costs and drive accountability for M365 spend with real-time visibility and automated license management.",
+      "features": [
+        "Real-Time License Inventory & Usage Analytics",
+        "Persona-Based License Allocation",
+        "Short-Term License Auto-Revocation",
+        "Multi-Division Cost Accountability Reporting",
+        "Identify unused & overutilized SKUs",
+        "Weekly automated stakeholder emails"
+      ],
+      "highlights": {
+        "eliminateWaste": "Eliminate Waste",
+        "realTimeData": "Real-Time Data",
+        "fullVisibility": "Full Visibility"
+      }
+    }
+  },
+  "benefits": {
+    "title": "Why Choose IT Control Box?",
+    "subtitle": "A more secure, efficient, and cost-effective IT organisation",
+    "items": [
+      {
+        "title": "Reduce Manual Effort by 70%",
+        "description": "Automate complex, multi-step tasks across AD, Azure, and Intune. Enable junior IT staff to resolve issues securely."
+      },
+      {
+        "title": "Enhance Security & Compliance",
+        "description": "Minimise privileged access, eliminate standing local admin rights, and enforce security policies consistently."
+      },
+      {
+        "title": "Optimise IT Costs",
+        "description": "Eliminate wasted spend on unused M365 licences and reclaim thousands of man-hours from repetitive tasks."
+      },
+      {
+        "title": "Simple Commercial Model",
+        "description": "No per-user fees, no per-device charges, no recurring fees. A single, transparent investment for a perpetual solution."
+      }
+    ]
+  },
+  "features": {
+    "badge": "Enterprise Features",
+    "title": "Built for Modern IT Operations",
+    "subtitle": "Comprehensive capabilities designed to meet the demands of enterprise environments",
+    "groups": [
+      {
+        "category": "Integration Capabilities",
+        "features": [
+          "ServiceNow & Symphony Summit Integration",
+          "Active Directory & Azure AD Sync",
+          "Microsoft Teams App Integration",
+          "SCCM & Intune Automation",
+          "Multi-Ticketing System Support"
+        ]
+      },
+      {
+        "category": "Security & Compliance",
+        "features": [
+          "4K Certificate Encryption",
+          "Automated Password Rotation",
+          "CIS, NIST, ISO27001 Compliance",
+          "Complete Audit Trails",
+          "Role-Based Access Control"
+        ]
+      },
+      {
+        "category": "Automation Features",
+        "features": [
+          "Zero-Touch Deployments",
+          "Smart Pre-Check Validations",
+          "Dynamic AD Login ID Generation",
+          "Automated License Assignment",
+          "Parallel System Provisioning"
+        ]
+      }
+    ]
+  },
+  "technicalFeatures": {
+    "title": "Technical Architecture & Capabilities",
+    "description": "A modular automation orchestration layer designed for Hybrid Microsoft Environments. Bridges the operational gap between on-premise Active Directory, Azure Entra ID, Microsoft Intune, and Exchange Online via secure API-driven architecture.",
+    "capabilities": [
+      {
+        "title": "Hybrid Identity Logic Engine",
+        "description": "Automates complex identity lifecycle management by handling directory logic that native tools often leave manual.",
+        "features": [
+          { "title": "Collision Handling & Sanitation", "desc": "Generates unique UPNs and collision-free IDs, sanitizing credentials to exclude ambiguous characters (e.g., 'I', 'l', '0', 'O')." },
+          { "title": "Attribute Orchestration", "desc": "Automates OU path calculation based on Business Unit/Location logic and syncs extensionAttributes (7, 8, 12) for downstream compatibility." },
+          { "title": "Persona-Based Entitlements", "desc": "Dynamically assigns License SKUs (E1/E3/F1) and Security Group memberships based on validated user personas." }
+        ]
+      },
+      {
+        "title": "Agentless Endpoint Security (LAPS)",
+        "description": "Replaces static local administrative rights with a dynamic, time-bound Least Privilege model without dedicated agent installation.",
+        "features": [
+          { "title": "Agentless Rotation", "desc": "Leverages CrowdStrike APIs or Intune scripts to automate monthly rotation of local admin passwords across the fleet." },
+          { "title": "Secure Transport", "desc": "Passwords secured at rest and in transit using 4K-certified encryption." },
+          { "title": "Ephemeral Access", "desc": "Credentials function on TTL basis, automatically expiring and rotating within 4 hours to prevent reuse." }
+        ]
+      },
+      {
+        "title": "API-Driven Intune Operations",
+        "description": "Exposes specific Microsoft Graph API endpoints to democratize complex Intune operations without granting broad 'Intune Administrator' roles.",
+        "features": [
+          { "title": "Hardware Hash Injection", "desc": "Direct API capability to upload Hardware Hashes (Autopilot) and Mac Serial Numbers (ABM) directly into Intune tenant." },
+          { "title": "Lifecycle Cleanup", "desc": "Executes 'Safe Removal' protocols purging records from AD, Azure AD, Intune, and Autopilot to prevent sync conflicts." },
+          { "title": "BitLocker Auditing", "desc": "Secure retrieval of BitLocker recovery keys from AD/Azure AD with mandatory immutable logging." }
+        ]
+      },
+      {
+        "title": "Standard Operating Environment (SOE)",
+        "description": "A zero-touch deployment engine designed for Windows 11 migration and standardization at scale.",
+        "features": [
+          { "title": "Universal Image Architecture", "desc": "Deploys single, hardened Windows 11 image across multi-vendor hardware using Real-Time Driver Injection." },
+          { "title": "Security Hardening", "desc": "Automates adherence to CIS/NIST benchmarks by disabling vulnerable services and enforcing secure policies pre-boot." },
+          { "title": "Backend Agnostic", "desc": "Supports SCCM and MDT infrastructures with parallel deployment over LAN or offline via USB for air-gapped sites." }
+        ]
+      },
+      {
+        "title": "Exchange & Collaboration Governance",
+        "description": "Automates granular Exchange tasks typically requiring high-level RBAC assignments.",
+        "features": [
+          { "title": "Temporal Delegation", "desc": "Automates 'Full Access' and 'Send-As' delegation with mandatory expiry parameters for automatic revocation." },
+          { "title": "Traffic Control", "desc": "Enforces strictly internal-only email forwarding rules to prevent data exfiltration to external domains." },
+          { "title": "Distribution Architecture", "desc": "Manages DL creation logic and ownership attributes without manual Exchange Admin Center interaction." }
+        ]
+      },
+      {
+        "title": "Security & Audit Framework",
+        "description": "Comprehensive compliance and traceability layer for all automated operations.",
+        "features": [
+          { "title": "Validated Execution", "desc": "Automation triggers gated by ITSM integration; operations only execute upon validated, approved ticket ID." },
+          { "title": "Immutable Audit Trails", "desc": "Every action logged for ISMS/ISO compliance, providing full traceability of 'Who, What, and When' for every task." }
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your IT Operations?",
+    "description": "Join organizations already saving thousands of hours with AIOBZ's intelligent automation solutions.",
+    "noRecurringFees": "No Recurring Fees",
+    "getStarted": "Get started immediately",
+    "noPerDeviceFee": "No per-device Fee",
+    "transparentPricing": "Transparent pricing",
+    "noPerUserFees": "No Per-User Fees",
+    "unlimitedUsers": "Unlimited users"
+  },
+  "footer": {
+    "description": "Enterprise IT automation solutions that deliver measurable results.",
+    "products": "Products",
+    "company": "Company",
+    "resources": "Resources",
+    "technicalDatasheet": "Technical Datasheet",
+    "quickAssessment": "Quick Assessment",
+    "copyright": "All rights reserved - © copyright AIObz Consulting"
+  },
+  "mainHero": {
+    "badge": "Enterprise-Grade Solutions · Intelligent Automation · Future-Ready",
+    "title1": "AI-Enabled IT Operations",
+    "title2": "Intelligence Meets Automation",
+    "description1": "Manual IT operations are costly, error-prone, and expose organizations to security risks. Human inefficiencies lead to license waste, compliance gaps, and operational bottlenecks that drain resources and increase expenses.",
+    "description2": "AIObz transforms your IT landscape with proactive automation and AI-driven analytics. Eliminate manual errors, optimize license costs, strengthen security posture, and gain predictive insights—all while reducing operational overhead by up to 70%."
+  },
+  "clientLogos": {
+    "title": "Trusted by Leading Enterprises"
+  },
+  "productBoxes": {
+    "itControlBox": "IT Control Box",
+    "itControlBoxSub": "Complete Identity, Device & O365 Management",
+    "itam": "IT Asset Management",
+    "itamSub": "Intelligent Discovery & Lifecycle Management",
+    "aiObz": "AI OBZ",
+    "aiObzSub": "Predictive Observability with Event Correlation"
+  },
+  "productsOverview": {
+    "itControlBox": {
+      "title": "IT Control Box",
+      "subtitle": "Complete IT Operations Control",
+      "description": "Enterprise-grade automation for Identity Management, Device Deployment, and O365 License Optimization. Eliminate manual processes, strengthen security, and reduce operational costs.",
+      "features": [
+        "Zero-Touch Identity Lifecycle Management",
+        "Automated Windows 11 Device Deployment",
+        "O365 License Cost Optimization",
+        "Real-Time Compliance & Auditing",
+        "Active Directory & Azure AD Sync",
+        "Security Hardening & LAPS Integration"
+      ],
+      "highlights": {
+        "timeSaved": "70% Time Saved",
+        "auditReady": "100% Audit Ready",
+        "zeroSubs": "Zero Subscriptions"
+      }
+    },
+    "itam": {
+      "title": "ITAM - IT Asset Management",
+      "subtitle": "Intelligent Asset Discovery & Lifecycle Management",
+      "description": "Enterprise-grade ITAM platform with automated hybrid IT discovery, ITIL-compliant CMDB, dynamic dependency mapping, and granular software metering. Eliminate blind spots and optimize IT spend.",
+      "features": [
+        "Hybrid IT Discovery (Agent & Agentless)",
+        "ITIL-Compliant CMDB",
+        "Dynamic Dependency Mapping",
+        "Complete Asset Lifecycle Management",
+        "Software Metering & License Optimization",
+        "ITSM Integration (ServiceNow, Jira)"
+      ],
+      "highlights": {
+        "autoDiscovery": "Auto Discovery",
+        "costSavings": "Cost Savings",
+        "fullCompliance": "Full Compliance"
+      }
+    },
+    "aiObz": {
+      "title": "AI OBZ",
+      "subtitle": "Predictive Observability Platform",
+      "description": "AI-powered event correlation and predictive analytics for proactive IT operations. Identify issues before they impact users with intelligent pattern recognition and automated root cause analysis.",
+      "features": [
+        "AI-Driven Event Correlation",
+        "Predictive Issue Detection",
+        "Automated Root Cause Analysis",
+        "Multi-Source Data Integration",
+        "Anomaly Detection & Alerting",
+        "Performance Trend Analysis"
+      ],
+      "highlights": {
+        "aiPowered": "AI-Powered",
+        "predictive": "Predictive",
+        "realTime": "Real-Time"
+      }
+    }
+  },
+  "heroCTA": {
+    "technicalDataSheet": "Technical Data Sheet"
+  },
+  "videoShowcase": {
+    "title": "See IT Control Box in Action",
+    "description": "Watch how our automation platform transforms IT operations"
+  },
+  "itcb": {
+    "videoTitle": "IT Control Box - End to End Life Cycle",
+    "videoDescription": "Automation from end user onboarding, device onboarding, access control, minimize admin privileges, reduce licenses waste, make site admin job easy.",
+    "shareTitle": "Share IT Control Box on LinkedIn"
+  },
+  "assessment": {
+    "heroTitle": "IT Control Box Maturity Assessment",
+    "heroDescription": "Evaluate your current IT operations maturity and discover how IT Control Box can help you save efforts, reduce costs, improve user experience, and enhance security governance.",
+    "formTitle": "Your Information",
+    "scopeTitle": "Assessment Scope",
+    "scopeDescription": "Select the areas you want to assess",
+    "inputsTitle": "Organization Size",
+    "identitiesLabel": "Number of Identities",
+    "licenseCostLabel": "Avg. Monthly License Cost (€/user)",
+    "hourlyRateLabel": "IT Support Hourly Rate (€/hr)",
+    "questionsTitle": "Assessment Questions",
+    "calculateResults": "Calculate Results",
+    "calculating": "Calculating...",
+    "insufficientInfo": "Insufficient information",
+    "pleaseAnswerOne": "Please answer at least one question to calculate results.",
+    "fillRequired": "Please fill in your name and email",
+    "selectScope": "Please select at least one scope",
+    "selectAnswer": "Select an answer",
+    "backToAssessment": "Back to Assessment",
+    "downloadResults": "Download Results",
+    "progress": "Progress",
+    "of": "of",
+    "questionsAnswered": "questions answered",
+    "resultsTitle": "Assessment Results",
+    "resultsDescription": "Based on your responses, here's how IT Control Box can transform your IT operations",
+    "responsesTitle": "Assessment Responses",
+    "overallMaturity": "Overall Maturity",
+    "currentVsImproved": "Current vs Improved Maturity",
+    "maturitySummary": "Maturity Score Summary",
+    "estimatedAnnualValue": "Estimated Annual Value",
+    "combinedSavings": "Combined effort and license cost savings for {{count}} identities",
+    "effortSavings": "Effort Savings",
+    "effortSavingsValue": "{{hours}} hrs/month",
+    "effortSavingsAnnual": "€{{amount}}/year",
+    "effortSavingsDesc": "Automated workflows reduce manual IT tasks significantly",
+    "licenseCostOptimization": "License Cost Optimization",
+    "licenseCostValue": "{{pct}}% potential savings",
+    "licenseCostAnnual": "€{{amount}}/year",
+    "licenseCostDesc": "Right-sizing licenses based on actual usage patterns",
+    "userExperience": "User Experience",
+    "uxValue": "{{pct}}% improvement",
+    "selfServiceEnabled": "Self-service enabled",
+    "uxDesc": "Faster response times and self-service capabilities",
+    "securityGovernance": "Security & Governance",
+    "securityValue": "{{pct}}% improvement",
+    "complianceEnhanced": "Compliance enhanced",
+    "securityDesc": "Automated compliance and real-time security monitoring",
+    "categories": {
+      "O365 Automation": "O365 Automation",
+      "Device Management": "Device Management",
+      "Identity Operations": "Identity Operations",
+      "Enterprise Identity Management": "Enterprise Identity Management"
+    },
+    "scopes": {
+      "o365": "O365 Automation",
+      "device": "Device Management",
+      "identity": "Identity Operations",
+      "enterprise": "Enterprise Identity Management"
+    },
+    "q1": { "question": "Do you have persona based O365 licenses allocation?", "options": ["Yes", "No"] },
+    "q2": { "question": "As per you, how many users have higher 365 subscription than they actually use or need?", "options": ["Less than 5%", "5 - 15%", "More than 15%", "Unknown"] },
+    "q3": { "question": "Is your HR / L&D Team empowered to control the violations of HR or L&D policies or KPIs?", "options": ["Yes", "No"] },
+    "q4": { "question": "What is the lead time to decommission or downgrade the users temp license?", "options": ["Less than 1 week", "1-4 weeks", "Manual or occasional"] },
+    "q5": { "question": "Do you monitor actual O365 consumptions vs license allocation?", "options": ["Yes", "No"] },
+    "q6": { "question": "Are you aware of the exceptions such as USB access, group memberships aligned to the persona changes?", "options": ["Yes", "No"] },
+    "q7": { "question": "Are your sr IT Leads busy in end user management complex tasks such as encryption, bit locker, group policy?", "options": ["No, completely managed by Jr team", "Less than 10 tickets per month", "More than 10 tickets per month"] },
+    "q8": { "question": "Do you have end point protection rollout automation?", "options": ["Yes", "No"] },
+    "q9": { "question": "Do you track # of devices per user?", "options": ["Yes", "No"] },
+    "q10": { "question": "How do you manage geo fencing for the roaming users and exceptions?", "options": ["We don't manage", "Low request - less than 30 per month", "More than 30 requests"] },
+    "q11": { "question": "How many BitLocker incidents / requests do you get per month needing manual intervention?", "options": ["Unknown", "Less than 20", "20 - 50", "50+"] },
+    "q12": { "question": "How many requests do you receive per month to remove, change mobile device or policy?", "options": ["Less than 20", "20-100", "100+"] },
+    "q13": { "question": "How many users have local admin access?", "options": ["Unknown", "Less than 10%", "More than 10%", "None"] },
+    "q14": { "question": "What's your device compliance ratio?", "options": ["Unknown", "Less than 50%", "50-85%", "More than 85%"] },
+    "q15": { "question": "Do IT manager or security manager get the easy to action reports about exceptions?", "options": ["Yes", "No"] },
+    "q16": { "question": "Do you have Identity Quarantine automation across multiple platforms and apps?", "options": ["Yes", "No", "TAT less than 1 hour", "TAT 1-6 hours", "TAT more than 6 hours"] },
+    "q17": { "question": "Do you have multiple teams to manage AD, Azure, Intune? Are there gaps causing sync issues?", "options": ["Multiple teams - Yes", "Multiple teams - No", "Hostname reuse - Yes", "Hostname reuse - No"] },
+    "q18": { "question": "Do you have secured automation in certificate management?", "options": ["Yes", "No"] },
+    "q19": { "question": "Do you know how many users reuse the same passwords, or non-compliant passwords?", "options": ["Less than 10%", "10-40%", "Unknown or more than 40%"] },
+    "q20": { "question": "Do your users use password reset self service? How much time your IT support spend monthly on these requests?", "options": ["Less than 10% Self service", "10-25% Self service", "25-60% Self service", "Unknown"] },
+    "q21": { "question": "How frequently the HR updates related to role, division, location, etc are synchronized with AD?", "options": ["Automated sync", "Manual sync"] },
+    "q22": { "question": "How many local admin access you have provided? For how long?", "options": ["Less than 5%", "5 - 15%", "More than 15%", "Unknown"] },
+    "q23": { "question": "How many shared licenses are allocated based on function or usage by multiple personal or services?", "options": ["Unknown", "Less than 50", "50 - 200", "200+"] },
+    "q24": { "question": "Is there automation to create IT support teams accounts?", "options": ["Yes", "No"] },
+    "q25": { "question": "What are the % of tickets escalated by L1 to L2 for troubleshooting?", "options": ["Less than 5%", "5 - 15%", "More than 15%", "Unknown"] },
+    "q26": { "question": "What is the % of end user failed in mock phishing?", "options": ["Less than 15%", "15-45%", "We do not run it"] },
+    "q27": { "question": "What is the % of end user password reset, MFA reset tickets resolved by self service or automation?", "options": ["Less than 20%", "20-70%", "More than 70%"] },
+    "q28": { "question": "Are your approvers enabled to understand impact of cost or security while approving requests?", "options": ["Yes", "No"] },
+    "q29": { "question": "Are your IT manager / leads enabled with the tools for quick audit and forensics of IDAM?", "options": ["None - more than 2 weeks", "1-5 days", "Less than 8 hours", "1-2 hours"] },
+    "q30": { "question": "Did you have any service disruptions due to certification expiry?", "options": ["Yes", "No"] },
+    "q31": { "question": "Do you have audit reports to track access during entire lifecycle or time duration?", "options": ["Yes", "No"] },
+    "q32": { "question": "Do you have automated control of the access changes based on changes in role?", "options": ["Yes", "No"] },
+    "q33": { "question": "Do you have automation for mass onboarding / deboarding?", "options": ["Yes", "No"] },
+    "q34": { "question": "Do your team or supplier track new threats to identity and access especially in the application landscape?", "options": ["Yes", "No"] },
+    "q35": { "question": "How frequently do you track excess access (continued access when people change roles)?", "options": ["Less than 10% people may have excess access", "10-30% might have extra access", "We don't track or control"] }
+  },
+  "datasheet": {
+    "title": "IT Control Box Technical Datasheet",
+    "description": "Get comprehensive technical documentation covering challenges, solutions, and detailed specifications of our unified IT management platform.",
+    "whatsInside": "What's Inside:",
+    "identityMgmt": "Identity Management",
+    "identityMgmtDesc": "AD lifecycle automation, bulk operations, self-service capabilities",
+    "deviceMgmt": "Device Management",
+    "deviceMgmtDesc": "SOE automation, LAPS integration, compliance monitoring",
+    "o365LicenseMgmt": "O365 License Management",
+    "o365LicenseMgmtDesc": "License optimization, usage analytics, cost control",
+    "techSpecs": "Technical Specifications",
+    "techSpecsDesc": "Architecture, security, deployment requirements, pricing",
+    "downloadTitle": "Download {{name}} Datasheet",
+    "downloadDesc": "Fill in your details to receive the technical datasheet",
+    "downloadBtn": "Download Datasheet"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Fill in your details and we'll get back to you shortly",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "phonePlaceholder": "+1 (555) 000-0000",
+    "orgPlaceholder": "Your company name",
+    "thankYou": "Thank You!",
+    "thankYouDesc": "We've received your message and sent a confirmation to your email. Our team will get back to you shortly.",
+    "successToast": "Thank you! We'll be in touch soon.",
+    "errorSubmit": "Unable to submit. Please try again.",
+    "errorRateLimit": "Please wait before trying again.",
+    "errorRequired": "Please fill in required fields",
+    "errorEmail": "Please enter a valid email address"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "ourVision": "Our Vision",
+    "visionQuote": "\"Enable clients and their support teams to deliver higher value from the existing IT tools and technologies.\"",
+    "leadershipTeam": "Leadership Team",
+    "getInTouch": "Get in Touch",
+    "india": "India",
+    "indiaAddress": "Swami Krupa 4/704, Kolshet Road, Dhokali, Thane, Maharashtra – 400607",
+    "sweden": "Sweden",
+    "swedenAddress": "Odlingsgatan 7C, 174 53 Sundbyberg, Sweden",
+    "mahesh": {
+      "name": "Mahesh Koli",
+      "role": "Co-Founder, Executive Advisor",
+      "bio1": "Mahesh Koli is the Co-Founder of IT Control Box and a seasoned global IT transformation executive with over 30 years of experience helping enterprises modernize their technology landscapes. Prior to founding IT Control Box, Mahesh spent 15+ years with the Capgemini & Sogeti Group, where he served as Vice President – Cloud Transformation and Delivery, leading large-scale programs for global clients.",
+      "bio2": "Throughout his career, Mahesh has worked extensively across Banking, Insurance, Pharma, Automotive, and Manufacturing sectors, delivering measurable outcomes in Cloud Transformation, Cyber Security, Digital Workplace, End-User Computing (EUC), and Application Modernization. His leadership has consistently driven business growth, innovation, and operational efficiency at scale.",
+      "bio3": "In addition to Capgemini, Mahesh has held senior leadership roles with leading product and platform companies such as Majesco, Mirantis (Docker ecosystem), Yodlee (Evernet), as well as OEMs including HP and Acer. He has served in diverse roles—Country Head, CIO, Business Unit Head, Portfolio Leader, Delivery & Operations Head, and Management Consultant—building high-performing teams, defining go-to-market strategies, developing partnerships, scaling accounts, and delivering sustained profitability across regions.",
+      "quote": "\"I am excited to bring my global experience to address critical IT challenges that are often overlooked by large product and services organizations. Having worked across the US, UK, Europe, the Middle East, and APAC, I strongly believe in solving real, operational problems with pragmatic, automation-first solutions. With the support of our early-adopter clients, we are seeing this vision take shape in a very tangible way.\""
+    },
+    "vinod": {
+      "name": "Vinod Dadhe",
+      "role": "Co-Founder, Operations Director",
+      "bio1": "Vinod Dadhe is the Co-Founder of IT Control Box and serves as Operations Director at Vinit Consulting. He brings over 25 years of deep technical and operational experience in Microsoft enterprise technologies, with strong expertise in Exchange, Microsoft 365 (M365), SCCM, Intune, Azure Entra, and related Microsoft platforms.",
+      "bio2": "Vinod has worked across Manufacturing, Banking, IT Services, and OEM product organizations, supporting enterprises worldwide with technology implementations, system integrations, and automation initiatives. His hands-on background enables him to bridge the gap between IT strategy and day-to-day operational realities.",
+      "bio3": "Over the years, Vinod has designed and delivered numerous IT automations for end-user support, particularly around Active Directory, M365, Intune, SCCM, and identity-driven workflows. His work reflects a deep understanding of the challenges faced by end users, IT support teams, and security functions alike.",
+      "quote": "\"I've spent years delivering automation solutions for end-user support and Microsoft platforms, and I've seen firsthand where traditional tools fall short. By combining real customer feedback with practical automation experience, we have built IT Control Box to help organizations get far more value from their existing Microsoft investments. Now, we're ready to scale this impact globally.\""
+    }
+  },
+  "successStories": {
+    "videoTitle": "IT Control Box Success Story",
+    "videoDescription": "See how enterprises achieve operational excellence with IT Control Box automation",
+    "shareTitle": "Share this success story on LinkedIn",
+    "ctaTitle": "Ready to Write Your Success Story?",
+    "ctaDescription": "Join leading enterprises who have transformed their IT operations with IT Control Box.",
+    "stories": [
+      {
+        "title": "Mastering Global Deployment",
+        "subtitle": "Proven Scale, Efficiency, and Reach at Enterprise Scale",
+        "challenge": "A large multinational enterprise faced the immense task of deploying Windows 11 across a diverse and complex array of international and domestic sites. The manual effort required would have been immense, risking inconsistencies, delays, and significant strain on IT resources.",
+        "solution": "The organization utilized the IT Control Box's Standard Operating Environment (SOE) automation tool for mass deployment. The solution provided a single, universal Windows 11 image that supports all business units, locations, and multiple hardware models (HP, Dell, Lenovo), ensuring consistency and security hardening based on industry best practices.",
+        "highlights": [
+          "Successfully deployed across sites including Grangemouth, Lexington, Sellersville, Kurla, Lower Parel, and Digwal",
+          "Seamless management of fleet in transition between Windows 10 (7,896 units) and Windows 11 (7,554 units)",
+          "Universal image supporting multiple hardware vendors"
+        ],
+        "metrics": [
+          { "value": "23,175", "label": "Total Systems Deployed" },
+          { "value": "15.45K", "label": "Man-Hours Saved" }
+        ]
+      },
+      {
+        "title": "Securing 20,000+ Endpoints",
+        "subtitle": "Automated Password Management at Scale",
+        "challenge": "Unmanaged local administrator privileges across a massive enterprise fleet created a critical attack vector. The organization needed visibility and control over 20,000+ assets across Corporate, Partner, and Warehouse units.",
+        "solution": "The organization deployed the IT Control Box LAPs App for agentless, automated local admin password management. The system provides real-time password rotation, fleet visibility, and inventory intelligence.",
+        "highlights": [
+          "17,634 administrative passwords changed successfully with high reliability",
+          "Fleet management visibility across 20,000+ assets",
+          "Identified 'Top 20 Slowest Systems' with boot times from 20 to 582 minutes for proactive maintenance"
+        ],
+        "metrics": [
+          { "value": "58,100", "label": "Total LAPS Usages Since July 2023" },
+          { "value": "14,980", "label": "Passwords Rotated in Last 30 Days" }
+        ]
+      },
+      {
+        "title": "Driving Financial Efficiency in O365",
+        "subtitle": "License Management at Enterprise Scale",
+        "challenge": "An enterprise with thousands of users struggled to track Office 365 license consumption across numerous SKUs (E1, E3, F1, Project, Visio) and business units. This lack of visibility led to over-provisioning, wasted budget, and a reactive approach to license availability.",
+        "solution": "The organization deployed the Office 365 License Management tool within the IT Control Box. The system provides real-time tracking of procured licenses versus actual usage for each SKU and business group, with automated weekly reporting and a multi-stage approval process for new license reservations.",
+        "highlights": [
+          "Real-time tracking across E1, E3, EOA, M365F1, M365F3, EMS E3, and more SKUs",
+          "Automated weekly reporting for license utilization",
+          "Multi-stage approval process for new license reservations"
+        ],
+        "metrics": [
+          { "value": "19,000+", "label": "Licenses Managed" },
+          { "value": "Precision", "label": "Optimization at Scale" }
+        ]
+      }
+    ]
+  },
+  "media": {
+    "title": "Media",
+    "description": "Stay updated with our latest news, insights, and thought leadership content.",
+    "blogs": "Blogs",
+    "videos": "Videos"
+  },
+  "aiobz": {
+    "title": "AI OBZ",
+    "subtitle": "Predictive Observability Platform",
+    "description": "AI-powered event correlation and predictive analytics for proactive IT operations. Identify issues before they impact users with intelligent pattern recognition and automated root cause analysis.",
+    "highlights": {
+      "aiPowered": "AI-Powered",
+      "predictiveAnalytics": "Predictive Analytics",
+      "realTimeInsights": "Real-Time Insights",
+      "proactiveOperations": "Proactive Operations"
+    },
+    "whatToExpect": "What to Expect",
+    "whatToExpectDesc": "AI OBZ will revolutionize how you monitor and manage IT operations with cutting-edge AI capabilities",
+    "features": [
+      { "title": "AI-Driven Event Correlation", "description": "Intelligent pattern recognition that connects related events across your entire IT infrastructure." },
+      { "title": "Predictive Issue Detection", "description": "Identify potential problems before they impact users with machine learning-powered predictions." },
+      { "title": "Automated Root Cause Analysis", "description": "Quickly pinpoint the source of issues with AI-assisted diagnostic capabilities." },
+      { "title": "Multi-Source Data Integration", "description": "Aggregate and analyze data from logs, metrics, traces, and events in one unified platform." },
+      { "title": "Anomaly Detection & Alerting", "description": "Smart alerting that reduces noise and highlights what truly matters." },
+      { "title": "Performance Trend Analysis", "description": "Visualize trends and forecast capacity needs with advanced analytics." }
+    ],
+    "futureTitle": "The Future of IT Observability",
+    "futureDesc": "Traditional monitoring is reactive—you find out about problems after they happen. AI OBZ flips this paradigm by using artificial intelligence to predict issues, correlate events across your stack, and provide actionable insights before incidents impact your business.",
+    "reductionNoise": "Reduction in Alert Noise",
+    "fasterRCA": "Faster Root Cause Analysis",
+    "fewerIncidents": "Fewer Incidents",
+    "ctaTitle": "Ready to explore the world of AI Observability",
+    "ctaDesc": "Get in touch to learn more about AI OBZ"
+  },
+  "identityMgmt": {
+    "badge": "Identity Management",
+    "title": "Zero-Touch User Lifecycle & Secure IT Administration",
+    "description": "A single interface for secure, delegated daily IT administration. Automate the entire identity lifecycle while enforcing policies consistently from onboarding to offboarding.",
+    "stat1": "70% less manual effort",
+    "stat2": "85% faster staff onboarding",
+    "stat3": "Complete audit trails",
+    "lifecycleTitle": "Intelligent Automation Across the Lifecycle",
+    "lifecycleSubtitle": "Interfacing with your HR data and ITSM tools as the single source of truth",
+    "joiner": "Joiner",
+    "joinerSubtitle": "Zero-Touch Onboarding",
+    "joinerFeatures": [
+      "Automate user creation based on HRMS data and policies",
+      "Integrate with ServiceNow to validate requests",
+      "Provision birthright access based on persona, location, and BU"
+    ],
+    "mover": "Mover",
+    "moverSubtitle": "Dynamic Access Control",
+    "moverFeatures": [
+      "Persona Change Control: Automatic partial access revocation",
+      "Excess Access Detection: Audit persona vs actual access",
+      "Enforce least privilege principle continuously"
+    ],
+    "leaver": "Leaver",
+    "leaverSubtitle": "Secure & Auditable Offboarding",
+    "leaverFeatures": [
+      "Timely revocation of all access, synced with HR records",
+      "Handle bulk deboarding for M&A or vendor projects",
+      "Complete audit trail of all access changes"
+    ],
+    "comprehensiveTitle": "Comprehensive Identity Solutions",
+    "centralizedTitle": "Centralized IT Control Box",
+    "centralizedDesc": "A \"single pane of glass\" for your support team, integrated directly into Microsoft Teams. Automates operational tasks, reducing the need for privileged admin accounts.",
+    "centralizedFeatures": ["Password Reset", "Unlock Account", "Reset MFA", "Add to AD Groups", "Change Display Name", "Assign O365 License", "Retrieve BitLocker Key", "Set Email Forwarding"],
+    "lapsTitle": "LAPS - Local Admin Password Solution",
+    "lapsDesc": "Eliminate standing local admin privileges on endpoints. Utilises CrowdStrike APIs or Intune scripts to automatically rotate local admin passwords monthly—no additional agent required.",
+    "lapsFeatures": [
+      "Agentless password rotation via CrowdStrike or Intune",
+      "4K certificate encryption for secure storage",
+      "Secure Teams app for on-demand password retrieval",
+      "Auto-change password within 4 hours after access",
+      "Proactive endpoint intelligence and health monitoring"
+    ],
+    "igaTitle": "Identity Governance & Administration (IGA)",
+    "igaDesc": "Comprehensive reporting and rapid response capabilities for proactive security management.",
+    "igaFeatures": [
+      "Identity Exceptions Report: Sync gaps, inactive users, policy exceptions",
+      "Identity Quarantine: Instantly disable ID in AD, Azure, and apps",
+      "Automated Threat Response: Password reset, forced logoff, MFA—no E5 needed",
+      "Automated Host Name Recycling across AD, Azure, and Intune"
+    ],
+    "complianceTitle": "Compliance Auditing & Reporting",
+    "complianceDesc": "Maintain a complete, auditable trail of all administrative activities for full traceability.",
+    "complianceFeatures": [
+      "Track and report on all access changes per identity",
+      "Detect internal exploits with access lifecycle audit",
+      "Approval enablement with cost impact visibility",
+      "CIS, NIST, ISO27001 compliance frameworks"
+    ],
+    "benefitsTitle": "Benefits for Your Organization",
+    "forLeadership": "For Leadership & CISO",
+    "forLeadershipDesc": "Enhanced governance, reduced risk, accelerated incident response",
+    "forITManagers": "For IT Managers",
+    "forITManagersDesc": "Increased efficiency, faster team onboarding, cost optimization",
+    "forITSupport": "For IT Support",
+    "forITSupportDesc": "Single pane of glass, empowered junior staff, faster troubleshooting",
+    "forEndUsers": "For End Users",
+    "forEndUsersDesc": "Faster resolutions, self-service capabilities, seamless experience",
+    "ctaTitle": "Ready to Transform Your Identity Management?",
+    "ctaDesc": "See how our identity automation can streamline your IT operations"
+  },
+  "deviceMgmt": {
+    "badge": "Device Management",
+    "title": "Deploy Secure, Standardised Endpoints in Minutes, Not Days",
+    "description": "Deploy a consistent, secure, and fully configured Windows environment across all hardware. Our SOE solution uses a single universal image, enabling mass remote deployment with virtually no IT skill required.",
+    "stat1": "Universal Windows 11 image",
+    "stat2": "HP, Dell, Lenovo support",
+    "stat3": "CIS/NIST/ISO27001 hardened",
+    "refCase": "Global Pharma Reference Case - UK, US, India",
+    "totalDeployed": "Total Systems Deployed",
+    "manHoursSaved": "Man Hours Saved",
+    "configConsistency": "Configuration Consistency",
+    "enterpriseTitle": "Enterprise Device Solutions",
+    "soeTitle": "Universal Windows 11 SOE Image",
+    "soeDesc": "A single Windows 11 image supports all hardware (HP, Dell, Lenovo) and business units, with custom apps deployed automatically. No separate images to maintain.",
+    "soeFeatures": [
+      "Single image for all hardware vendors and models",
+      "Custom apps deployed automatically per business unit",
+      "Automated driver injection for 20+ hardware models",
+      "Customizable yet repeatable based on geography and role"
+    ],
+    "hardeningTitle": "Security Hardening",
+    "hardeningDesc": "Implements industry best practices like CIS, NIST, and ISO27001 frameworks, disabling vulnerable services and enforcing policies from deployment.",
+    "hardeningFeatures": [
+      "CIS Level 1 and Level 2 benchmark enforcement",
+      "NIST 800-53 and ISO27001 security controls",
+      "BitLocker encryption auto-enablement",
+      "Vulnerable services disabled by default"
+    ],
+    "zeroTouchTitle": "Zero-Touch Deployment",
+    "zeroTouchDesc": "Works with MDT or SCCM to deliver a silent, fully automated installation over the network or via USB for remote sites. Systems are automatically joined to AD or Azure AD.",
+    "zeroTouchFeatures": [
+      "Silent, fully automated installation—no user interaction",
+      "Network PXE boot or USB deployment for remote sites",
+      "Auto domain join to AD or Azure AD",
+      "Virtually no IT skill required at remote sites"
+    ],
+    "lapsTitle": "LAPS Integration",
+    "lapsDesc": "Eliminate standing local admin privileges on all deployed endpoints with integrated Local Admin Password Solution for complete endpoint security.",
+    "lapsFeatures": [
+      "Automatic password rotation on deployed systems",
+      "4K certificate encryption for password storage",
+      "Secure on-demand access via Microsoft Teams",
+      "Complete audit trail for compliance"
+    ],
+    "ctaTitle": "Ready to Scale Your Device Deployment?",
+    "ctaDesc": "See how our device management automation can transform your Windows deployment"
+  },
+  "o365Mgmt": {
+    "badge": "O365 License Management",
+    "title": "Eliminate License Waste and Enforce Accountability",
+    "description": "Managing thousands of users across multiple O365 SKUs (E1, E3, E5, Project) is a major challenge. Our automated system provides a real-time, accurate inventory, enabling you to stop overspending and assign costs back to the business.",
+    "stat1": "Real-time license tracking",
+    "stat2": "Cost accountability",
+    "stat3": "Auto-revocation",
+    "refCase": "Global Pharma Reference Case - Europe & India",
+    "personaAllocation": "Persona-Based Allocation",
+    "personaAllocationDesc": "Dynamically assign correct licence based on department, role, or location",
+    "shortTermMgmt": "Short-Term Management",
+    "shortTermMgmtDesc": "Automate allocation and revocation of temporary licences",
+    "costAccountability": "Cost Accountability",
+    "costAccountabilityDesc": "Track and report usage per business group with automated emails",
+    "optimizationInsights": "Optimization Insights",
+    "optimizationInsightsDesc": "Identify overutilised SKUs and unused licences on disabled accounts",
+    "completeControl": "Complete O365 License Control",
+    "realTimeSummaryTitle": "Real-Time License Summary",
+    "realTimeSummaryDesc": "Clarity at a glance: Track procured vs. used licences across all SKUs including E1, E3, E5, EMS E3, M365 F1, F3, and more. Know exactly where your licences are and who's using them.",
+    "realTimeSummaryFeatures": [
+      "Live dashboard showing procured, used, and available licences",
+      "User count by business name and division",
+      "Detection of unused and underutilized licenses",
+      "Active vs inactive user identification"
+    ],
+    "costAllocationTitle": "Multi-Division Cost Allocation",
+    "costAllocationDesc": "Track and report licence usage per business group with automated weekly emails to stakeholders. Enable accurate chargebacks and cost accountability across the organization.",
+    "costAllocationFeatures": [
+      "Department-wise license usage breakdown",
+      "Cost center allocation and chargeback reporting",
+      "Automated weekly stakeholder email reports",
+      "Export to Excel, PDF, and CSV formats"
+    ],
+    "personaAssignTitle": "Persona-Based License Assignment",
+    "personaAssignDesc": "Dynamically assign the correct licence based on department, role, or location. Reduce over-provisioning and ensure users get exactly what they need.",
+    "personaAssignFeatures": [
+      "Role-based licence assignment automation",
+      "Location and department-aware provisioning",
+      "Approval enablement with cost impact visibility",
+      "Faceless account management for cost reduction"
+    ],
+    "shortTermTitle": "Short-Term License Management",
+    "shortTermDesc": "Automate the allocation and, crucially, the revocation of temporary licences to eliminate waste. No more forgotten temporary assignments accumulating costs.",
+    "shortTermFeatures": [
+      "Time-bound licence assignments with auto-expiry",
+      "Automatic revocation of temporary licences",
+      "Contractor and vendor licence management",
+      "Project-based licence allocation and tracking"
+    ],
+    "ctaTitle": "Ready to Optimize Your O365 Costs?",
+    "ctaDesc": "See how our license management can help you eliminate waste and enforce accountability"
+  },
+  "itamAlt": {
+    "heroTitle1": "The Modern Foundation for",
+    "heroTitle2": "IT Success",
+    "heroDesc": "Comprehensive IT Asset Management, Hybrid Discovery, and Automated CMDB — designed for the Mid-Market.",
+    "frictionTitle": "The Friction in Modern IT Operations",
+    "frictionDesc": "Enterprise Management Associates (EMA) reveals that real-time discovery and CMDB maturity are the critical keys to ServiceOps success. Relying on manual spreadsheets or fragmented point solutions leads to inaccurate data, bloated software spending, and severe security blind spots.",
+    "blueprintTitle": "A Value-Driven Modular Blueprint",
+    "blueprintDesc": "Four interconnected modules that work together to deliver complete IT visibility.",
+    "businessValueTitle": "Translating Features to Business Realities",
+    "integrationsTitle": "Limitless Integration Possibilities",
+    "integrationsDesc": "Play nice with your existing ecosystem. Zero vendor lock-in.",
+    "kvpTitle": "Key Value Propositions",
+    "kvpDesc": "Agile, scalable yet simple and efficient.",
+    "ctaTitle": "Stop Managing Assets in the Dark",
+    "ctaDesc": "Achieve total visibility, ensure unwavering compliance, and build a configuration foundation you can actually trust.",
+    "problems": [
+      { "problem": "Blind spots in hybrid and WFA environments.", "solution": "Automated, agentless, and agent-based continuous discovery." },
+      { "problem": "High failure rate of manual CMDB updates.", "solution": "ITIL-compliant, automatically populated single source of truth." },
+      { "problem": "Unintended outages from routine network changes.", "solution": "Dynamic dependency mapping with ITSM change collision overlays." },
+      { "problem": "Wasted spend on unused software licenses.", "solution": "Granular software metering and lifecycle management." }
+    ],
+    "modules": [
+      {
+        "title": "Hybrid IT Discovery",
+        "tagline": "Eliminate blind spots across your entire estate.",
+        "features": [
+          { "title": "Agentless & API-Driven", "desc": "Over 140 extendable probes for cloud (AWS, Azure), hypervisors, and data centers." },
+          { "title": "Work-From-Anywhere (WFA)", "desc": "Optional agents for Windows, macOS, and Linux to monitor off-network changes." },
+          { "title": "Set-and-Forget Automation", "desc": "Continually rescan the IT estate to capture new assets and configuration changes securely." }
+        ]
+      },
+      {
+        "title": "Automated CMDB",
+        "tagline": "A pristine, ITIL-compliant single source of truth.",
+        "features": [
+          { "title": "Intelligent Automation", "desc": "Granular business rules to automate the promotion of CI updates." },
+          { "title": "Full Schema Flexibility", "desc": "Track hundreds of hardware, software, and IoT configuration attributes." },
+          { "title": "Factual Decisions", "desc": "Maintain complete CI history and versioning to eliminate the guesswork fueling IT operations." }
+        ]
+      },
+      {
+        "title": "ITAM Dependency Map",
+        "tagline": "Dynamic visual representations of business service dependencies.",
+        "features": [
+          { "title": "Impact Analysis", "desc": "Instantly answer: What is the risk exposure to making this change? Who are the stakeholders?" },
+          { "title": "Heads-Up Display", "desc": "Overlays ITSM incident and change records directly onto the infrastructure map." },
+          { "title": "Root Cause Identification", "desc": "Visually track dependencies to improve MTBF and MTTR." }
+        ]
+      },
+      {
+        "title": "Asset Lifecycle & License Management",
+        "tagline": "Stay audit-proof while minimizing costs.",
+        "features": [
+          { "title": "End-to-End Tracking", "desc": "Manage hardware and software from procurement to decommissioning." },
+          { "title": "Software Metering", "desc": "Track actual software usage to identify and reclaim underutilized licenses." },
+          { "title": "Vendor & Contract Management", "desc": "Automatic warranty lookups and proactive management of SLAs and renewals." }
+        ]
+      }
+    ],
+    "differentiators": [
+      { "title": "Autonomic Social Discovery", "desc": "Automatically generates multi-channel tasks to collect data machines cannot scan — SLAs, ownership, EOL status, business policies. The system learns who in the organization is best suited to provide specific missing data." },
+      { "title": "Security & Vulnerability Overlay", "desc": "Built-in NVD integration overlays known vulnerabilities directly onto the Dependency Map. Allows SecOps to identify which critical business services are exposed and prioritize patching accordingly." }
+    ],
+    "businessValue": [
+      { "title": "Operational Efficiency", "metric": "Automated Discovery + CMDB", "desc": "Reduces manual data entry by thousands of hours, lowering OpEx." },
+      { "title": "User Productivity", "metric": "Dependency Mapping", "desc": "Prevents change collisions, vastly reducing unplanned downtime and MTTR." },
+      { "title": "Cybersecurity & Compliance", "metric": "NVD Overlays + License Metering", "desc": "Hardens the attack surface and eliminates unexpected software audit penalties." }
+    ],
+    "integrations": [
+      { "category": "ITSM Platforms", "items": ["ServiceNow", "Jira"] },
+      { "category": "Cloud & Virtualization", "items": ["AWS", "Microsoft Azure", "VMware"] },
+      { "category": "Security & IAM", "items": ["Okta", "PingIdentity", "CyberArk"] }
+    ],
+    "midMarket": [
+      { "title": "Rapid Time-to-Value", "desc": "Easy to deploy SaaS architecture with multi-region AWS hosting. Start seeing mapped assets in days, not months." },
+      { "title": "Low Total Cost of Ownership", "desc": "Predictable pricing model with no hidden integration fees." },
+      { "title": "Built for Lean Teams", "desc": "Intelligent automation acts as a force multiplier for IT staff, freeing them from spreadsheets to focus on strategic ServiceOps." }
+    ]
+  },
+  "greenitcoItam": {
+    "title": "ITAM IT Asset Management",
+    "subtitle": "Intelligent Asset Discovery & Lifecycle Management Platform",
+    "highlights": {
+      "fasterAudits": "80% Faster Audits",
+      "costReduction": "30% Cost Reduction",
+      "compliance": "100% Compliance",
+      "aiAutomation": "AI-Powered Automation"
+    },
+    "suiteTitle": "Comprehensive Asset Management Suite",
+    "suiteDesc": "From automated discovery to intelligent service desk, manage your entire IT infrastructure with one unified platform",
+    "features": [
+      { "title": "Complete Asset Lifecycle", "description": "Track IT and Non-IT assets from procurement to disposal with comprehensive lifecycle management.", "highlights": ["Barcoding & RFID", "Asset Tagging", "Depreciation Tracking"] },
+      { "title": "Auto Network Discovery", "description": "Agent and agentless discovery of all network devices including Windows, Linux, Apple, IoT devices, and cloud resources.", "highlights": ["Real-Time Discovery", "AD Integration", "Cloud Inventory"] },
+      { "title": "License Management", "description": "Optimize software licensing costs and track license compliance with automated monitoring and alerts.", "highlights": ["Usage Tracking", "Expiry Alerts", "Cost Optimization"] },
+      { "title": "Procurement Management", "description": "Streamline purchase orders, vendor bidding, budget tracking, and approval workflows.", "highlights": ["Vendor Management", "PO Creation", "Budget Control"] },
+      { "title": "Intelligent Service Desk", "description": "ITIL-ready service desk with AI-powered ticket automation, SLA management, and multi-channel support.", "highlights": ["BOT Integration", "Auto Allocation", "Mobile App"] },
+      { "title": "Configuration Management", "description": "Maintain accurate CMDB with automated updates, change management, and impact analysis.", "highlights": ["CMDB", "Change Tracking", "Impact Analysis"] }
+    ],
+    "itam2Title": "Introducing ITAM",
+    "itam2Desc": "Revolutionary leap forward in intelligent task management with advanced automation",
+    "itam2Features": [
+      "Seamless Software Deployment",
+      "Advanced Patch Management",
+      "Dynamic Kanban Board",
+      "Announcement Module",
+      "Vendor Bidding",
+      "Integrated Call Recording & Ticket Creation"
+    ],
+    "techCapabilitiesTitle": "Technical Capabilities",
+    "techCapabilitiesDesc": "Enterprise-grade features for comprehensive IT operations management",
+    "techSections": [
+      { "category": "Asset Management", "items": ["IT & Non-IT Asset Tracking", "Barcoding & RFID Tagging", "Auto Discovery", "Location Mapping", "Temporary Asset Allocation", "Asset AMC & Maintenance", "Warranty Management", "Asset Audit & History", "Document Management", "Threshold Management"] },
+      { "category": "Network Discovery", "items": ["Agent & Agentless Discovery", "Windows, Linux, Apple Systems", "Active Directory Integration", "Software Inventory", "Printers, Cameras, Routers", "IoT Devices & Smart TV", "Virtual Machines", "Cloud Inventory (Azure)", "USB & Pendrive Detection", "Remote Desktop (RDP)"] },
+      { "category": "Service Desk", "items": ["Omni-Channel Ticketing", "Auto Ticket Generation", "SLA Management", "Knowledge Base (Public/Private)", "Feedback Management", "Work Flow Automation", "API Integration", "IVR Integration"] },
+      { "category": "Compliance & Security", "items": ["ISO 27001 & ISO 55001", "ITIL Standards", "SOX & GDPR Compliant", "Audit Trail & History", "Role-Based Access Control", "Multi-Company Support", "Configuration Management DB", "Change Management"] }
+    ],
+    "complianceTitle": "Compliance Ready",
+    "complianceDesc": "Built-in support for major compliance standards and regulatory frameworks",
+    "mobileTitle": "Mobile App for On-the-Go Management",
+    "mobileDesc": "Track assets, raise tickets, and manage your IT infrastructure from anywhere with our powerful mobile application"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  },
+  "seo": {
+    "home": {
+      "title": "IT Control Box | Enterprise IT Automation | AIObz",
+      "description": "Automate Identity, Device & O365 management with IT Control Box. Reduce manual effort by 80% with enterprise-grade IT automation."
+    },
+    "products": {
+      "title": "Products | IT Control Box, ITAM & AI OBZ | AIObz",
+      "description": "Explore AIObz's product suite: IT Control Box for IT automation, ITAM for asset lifecycle management, and AI OBZ for predictive observability."
+    },
+    "itam": {
+      "title": "IT Asset Management (ITAM) | AIObz",
+      "description": "Intelligent IT Asset Management with automated discovery, lifecycle tracking, compliance reporting and cost optimization."
+    },
+    "aiObz": {
+      "title": "AI OBZ | AI-Powered Predictive Observability | AIObz",
+      "description": "AI-powered observability platform with predictive analytics, anomaly detection and real-time infrastructure monitoring."
+    },
+    "identity": {
+      "title": "Identity & Access Management | IT Control Box | AIObz",
+      "description": "Automate the full identity lifecycle — onboarding, role changes, offboarding — with zero-touch provisioning and audit-ready compliance."
+    },
+    "device": {
+      "title": "Device Management | IT Control Box | AIObz",
+      "description": "Enterprise endpoint management with SOE deployment, security hardening, zero-touch provisioning and LAPS integration."
+    },
+    "o365": {
+      "title": "O365 License Management | IT Control Box | AIObz",
+      "description": "Optimize Microsoft 365 license spend with real-time usage analytics, persona-based allocation and automated cost accountability."
+    },
+    "aboutUs": {
+      "title": "About Us | AIObz Consulting",
+      "description": "Learn about AIObz Consulting — the team behind IT Control Box, ITAM and AI OBZ enterprise automation platforms."
+    },
+    "successStories": {
+      "title": "Success Stories | AIObz",
+      "description": "See how enterprises reduced costs and improved efficiency with IT Control Box, ITAM and AI OBZ solutions."
+    },
+    "media": {
+      "title": "Media & Resources | AIObz",
+      "description": "Videos, articles and resources about IT automation, asset management and AI-powered observability from AIObz."
+    },
+    "contact": {
+      "title": "Contact Us | AIObz",
+      "description": "Get in touch with AIObz for a demo, consultation or partnership inquiry about IT Control Box, ITAM or AI OBZ."
+    },
+    "assessment": {
+      "title": "IT Maturity Assessment | AIObz",
+      "description": "Take our free IT maturity assessment to evaluate your organization's automation readiness and get personalized recommendations."
+    },
+    "itAssetMgmt": {
+      "title": "IT Asset Management | Greenitco ITAM | AIObz",
+      "description": "Comprehensive IT asset management with discovery, CMDB, dependency mapping and lifecycle automation."
+    },
+    "datasheet": {
+      "title": "IT Control Box Datasheet | AIObz",
+      "description": "Download the IT Control Box datasheet — detailed specifications for enterprise IT automation."
+    },
+    "cognitia": {
+      "title": "Cognitia — Business-Centric IT Intelligence | AIObz",
+      "description": "Cognitia wraps Virima discovery and ServiceNow into a business-process view of your IT infrastructure. Get your service map in 24 hours."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 10, 2026",
+    "s1Title": "1. Introduction",
+    "s1p1": "AIObz Consulting (\"we\", \"our\", or \"us\") is committed to protecting the privacy and security of your personal data. This Privacy Policy explains how we collect, use, store, and protect your personal information in accordance with the General Data Protection Regulation (GDPR - EU 2016/679), the Swedish Data Protection Act (Dataskyddslag 2018:218), and other applicable European data protection laws.",
+    "s1p2": "This policy applies to all visitors of our website, users of our products (IT Control Box, ITAM, AI OBZ), and individuals who interact with us through contact forms, assessments, or other communications.",
+    "s2Title": "2. Data Controller",
+    "s2p1": "AIObz Consulting is the data controller for the personal data processed through this website and our services. For any data protection inquiries, please contact us at:",
+    "s3Title": "3. Personal Data We Collect",
+    "s3p1": "We may collect the following categories of personal data:",
+    "s3Contact": "Contact Information:",
+    "s3ContactDesc": "Name, email address, phone number, organisation name — provided when you fill in contact forms, datasheet requests, or assessments.",
+    "s3Usage": "Usage Data:",
+    "s3UsageDesc": "Pages visited, browser type, device information, IP address, and interaction patterns collected via analytics.",
+    "s3Assessment": "Assessment Data:",
+    "s3AssessmentDesc": "Responses provided through our IT maturity assessment tool, including selected scopes, answers, and calculated results.",
+    "s3Communication": "Communication Data:",
+    "s3CommunicationDesc": "Records of correspondence when you contact us.",
+    "s4Title": "4. Legal Basis for Processing (GDPR Art. 6)",
+    "s4p1": "We process your personal data based on the following legal grounds:",
+    "s4Consent": "Consent (Art. 6(1)(a)):",
+    "s4ConsentDesc": "When you voluntarily submit forms or subscribe to communications. You may withdraw consent at any time.",
+    "s4Legitimate": "Legitimate Interest (Art. 6(1)(f)):",
+    "s4LegitimateDesc": "For website analytics, improving our services, and responding to enquiries.",
+    "s4Contract": "Contractual Necessity (Art. 6(1)(b)):",
+    "s4ContractDesc": "When processing is necessary to perform or prepare a contract with you.",
+    "s4Legal": "Legal Obligation (Art. 6(1)(c)):",
+    "s4LegalDesc": "Where required by applicable law.",
+    "s5Title": "5. How We Use Your Data",
+    "s5i1": "To respond to your enquiries and provide requested information",
+    "s5i2": "To process datasheet download requests and assessment submissions",
+    "s5i3": "To improve our website, products, and services",
+    "s5i4": "To send relevant communications (only with your consent)",
+    "s5i5": "To comply with legal obligations",
+    "s6Title": "6. Data Retention",
+    "s6p1": "We retain personal data only for as long as necessary to fulfil the purposes for which it was collected, or as required by law. Contact form submissions and assessment data are retained for a maximum of 24 months unless a longer retention period is required by law or an ongoing business relationship.",
+    "s7Title": "7. Data Sharing & Transfers",
+    "s7p1": "We do not sell your personal data. We may share data with:",
+    "s7Service": "Service Providers:",
+    "s7ServiceDesc": "Trusted third-party providers who assist in hosting, analytics, and email delivery, bound by data processing agreements.",
+    "s7Legal": "Legal Authorities:",
+    "s7LegalDesc": "When required by law or to protect our legal rights.",
+    "s7p2": "Where data is transferred outside the EU/EEA, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses (SCCs) or adequacy decisions by the European Commission.",
+    "s8Title": "8. Cookies",
+    "s8p1": "Our website uses essential cookies to ensure basic functionality. We may also use analytics cookies to understand how visitors interact with our site. You can manage cookie preferences through your browser settings. For detailed information, refer to our cookie settings on first visit.",
+    "s9Title": "9. Data Security",
+    "s9p1": "We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, alteration, disclosure, or destruction. These include encryption in transit (TLS/SSL), access controls, and regular security reviews.",
+    "s10Title": "10. Changes to This Policy",
+    "s10p1": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated \"Last updated\" date. We encourage you to review this policy periodically.",
+    "disclaimer": "Disclaimer: All statements in this page and report are indicative and subject to terms, conditions, and contractual agreement. No obligation exists unless expressly agreed in a legally binding contract."
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "lastUpdated": "Last updated: March 10, 2026",
+    "s1Title": "1. General",
+    "s1p1": "These Terms and Conditions (\"Terms\") govern your access to and use of the website, products, and services provided by AIObz Consulting (\"we\", \"our\", or \"us\"). By accessing our website or using our services, you agree to be bound by these Terms. If you do not agree, please do not use our services.",
+    "s2Title": "2. Services",
+    "s2p1": "AIObz Consulting provides enterprise IT automation software products including IT Control Box, IT Asset Management (ITAM), and AI OBZ. Our services include software licensing, implementation, and related consulting services as agreed upon in individual contracts.",
+    "s3Title": "3. Intellectual Property",
+    "s3p1": "All content, software, trademarks, logos, and materials on this website and within our products are the intellectual property of AIObz Consulting or its licensors. No part of this content may be reproduced, distributed, or transmitted without prior written permission.",
+    "s3p2": "Our software products are licensed, not sold. The specific terms of each software license are defined in the applicable Software License Agreement provided to customers.",
+    "s4Title": "4. User Obligations",
+    "s4p1": "When using our website and services, you agree to:",
+    "s4i1": "Provide accurate and complete information when submitting forms or registering for services",
+    "s4i2": "Not use our services for any unlawful or unauthorised purpose",
+    "s4i3": "Not attempt to interfere with, compromise, or disrupt our systems or security",
+    "s4i4": "Not reverse-engineer, decompile, or disassemble any of our software products",
+    "s4i5": "Comply with all applicable local, national, and international laws and regulations",
+    "s5Title": "5. Pricing & Payments",
+    "s5p1": "Our products follow a no recurring fees model. Specific pricing, payment terms, and deliverables are defined in individual commercial agreements. All prices quoted on our website or in proposals are indicative and subject to the terms of a signed contract.",
+    "s6Title": "6. Limitation of Liability",
+    "s6p1": "To the maximum extent permitted by applicable European law:",
+    "s6i1": "Our website and its content are provided \"as is\" without warranties of any kind, whether express or implied.",
+    "s6i2": "We shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of our website or services.",
+    "s6i3": "Our total liability under any claim shall not exceed the amounts paid by you under the applicable contract in the 12 months preceding the claim.",
+    "s6i4": "Assessment results and reports provided through our website are indicative and for informational purposes only.",
+    "s7Title": "7. Data Protection",
+    "s7p1": "We process personal data in accordance with the General Data Protection Regulation (GDPR) and our",
+    "s7PrivacyLink": "Privacy Policy",
+    "s7p1b": "By using our services, you acknowledge that you have read and understood our Privacy Policy.",
+    "s7p2": "For enterprise customers, data processing terms are governed by a separate Data Processing Agreement (DPA) as required under GDPR Article 28.",
+    "s8Title": "8. Confidentiality",
+    "s8p1": "Both parties agree to maintain the confidentiality of any proprietary or sensitive information exchanged during the course of engagement. This obligation survives termination of any agreement between the parties.",
+    "s9Title": "9. Third-Party Links",
+    "s9p1": "Our website may contain links to third-party websites. We are not responsible for the content, privacy practices, or availability of such external sites. Accessing third-party links is at your own risk.",
+    "s10Title": "10. Termination",
+    "s10p1": "We reserve the right to suspend or terminate access to our website or services at any time, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.",
+    "s11Title": "11. Governing Law & Jurisdiction",
+    "s11p1": "These Terms are governed by and construed in accordance with the laws of Sweden. Any disputes arising from or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of Sweden.",
+    "s11p2": "For consumers within the European Union, nothing in these Terms affects your statutory rights under applicable consumer protection legislation.",
+    "s12Title": "12. Changes to These Terms",
+    "s12p1": "We may revise these Terms at any time by updating this page. Changes take effect upon posting. Continued use of our website or services constitutes acceptance of the revised Terms.",
+    "s13Title": "13. Contact",
+    "s13p1": "For questions regarding these Terms, please contact us at:",
+    "disclaimer": "Disclaimer: All statements in this page and report are indicative and subject to terms, conditions, and contractual agreement. No obligation exists unless expressly agreed in a legally binding contract.",
+    "copyright": "All rights reserved — © copyright AIObz Consulting"
+  },
+  "cookie": {
+    "title": "We value your privacy",
+    "description": "We use cookies and similar technologies to analyse traffic and improve your experience. By clicking \"Accept\", you consent to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "privacyLink": "Privacy Policy",
+    "lang": "en"
+  }
+}

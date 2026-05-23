@@ -1,0 +1,53 @@
+.env.local
+.env.*.local
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Keep example files in git
+!.env.example
+
+# AWS/Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+!terraform.tfvars.dev
+!terraform.tfvars.staging
+!terraform.tfvars.prod
+.terraform/
+.terraform.lock.hcl
+
+# CloudFormation
+*.json.cfn
+
+# Deployment artifacts
+*.zip
+*.tar.gz
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# Build outputs
+out/
+coverage/
+.nyc_output/

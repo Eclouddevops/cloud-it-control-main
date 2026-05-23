@@ -1,0 +1,15 @@
+# PRD (Production) Environment Configuration
+# Branch: main → deploys here automatically via GitHub Actions
+# Purpose: Live customer-facing environment — treat with care
+
+aws_region         = "us-east-1"
+environment        = "prd"
+domain_name        = "app.cloud-it-control.example.com"
+certificate_domain = "cloud-it-control.example.com"
+hosted_zone_id     = "Z1234567890ABC"   # Replace: aws route53 list-hosted-zones-by-name
+enable_waf         = true               # WAF mandatory in production
+
+# Supabase — production project (never share with lower environments)
+supabase_project_id      = "REPLACE_WITH_PRD_SUPABASE_PROJECT_ID"
+supabase_url             = "https://REPLACE_WITH_PRD_SUPABASE_PROJECT_ID.supabase.co"
+supabase_publishable_key = "REPLACE_WITH_PRD_SUPABASE_ANON_KEY"

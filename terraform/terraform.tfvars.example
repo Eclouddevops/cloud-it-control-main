@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Terraform Environment Configuration Examples
+
+# dev environment (terraform.tfvars.dev)
+# staging environment (terraform.tfvars.staging) 
+# prod environment (terraform.tfvars.prod)
+
+# Copy the appropriate example file to terraform.tfvars:
+# cp terraform.tfvars.dev terraform.tfvars
+
+# Create terraform.tfvars.dev with:
+aws_region              = "us-east-1"
+environment             = "dev"
+domain_name             = "dev.cloud-it-control.com"
+certificate_domain      = "cloud-it-control.com"
+hosted_zone_id          = "Z1234567890ABC"
+enable_waf              = false
+supabase_project_id     = "yvzekynyerwbcfqslkfb"
+supabase_url            = "https://yvzekynyerwbcfqslkfb.supabase.co"
+supabase_publishable_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."

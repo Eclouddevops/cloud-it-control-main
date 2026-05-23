@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Microsoft Fluent inspired color palette */
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    /* Microsoft Blue primary */
+    --primary: 207 100% 42%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Lighter blue accent */
+    --primary-light: 207 90% 88%;
+    
+    /* Secondary gray tones */
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 210 11% 15%;
+
+    --muted: 210 17% 95%;
+    --muted-foreground: 215 14% 46%;
+
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 31% 91%;
+    --input: 214 31% 91%;
+    --ring: 207 100% 42%;
+
+    --radius: 0.5rem;
+    
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(207 100% 42%), hsl(207 90% 54%));
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 17% 98%));
+    --shadow-soft: 0 2px 8px hsl(207 100% 42% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(207 100% 42% / 0.12);
+    --shadow-strong: 0 8px 24px hsl(207 100% 42% / 0.16);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 11% 11%;
+    --foreground: 210 17% 98%;
+
+    --card: 210 11% 15%;
+    --card-foreground: 210 17% 98%;
+
+    --popover: 210 11% 15%;
+    --popover-foreground: 210 17% 98%;
+
+    --primary: 207 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-light: 207 90% 20%;
+
+    --secondary: 210 11% 18%;
+    --secondary-foreground: 210 17% 98%;
+
+    --muted: 210 11% 18%;
+    --muted-foreground: 215 14% 65%;
+
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 11% 22%;
+    --input: 210 11% 22%;
+    --ring: 207 100% 50%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(207 100% 50%), hsl(207 90% 60%));
+    --gradient-light: linear-gradient(180deg, hsl(210 11% 11%), hsl(210 11% 15%));
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 24px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Client logos infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}

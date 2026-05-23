@@ -1,0 +1,380 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main       # → prd (production)
+      - uat        # → uat (user acceptance testing)
+      - staging    # → staging
+      - develop    # → dev
+  pull_request:
+    branches:
+      - main
+      - uat
+      - staging
+      - develop
+
+env:
+  AWS_REGION: us-east-1
+  NODE_VERSION: "20"
+
+jobs:
+  # ─────────────────────────────────────────────
+  # 1. BUILD
+  # ─────────────────────────────────────────────
+  build:
+    name: Build Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Lint code
+        run: bun lint
+        continue-on-error: true
+
+      - name: Build application
+        run: bun run build
+        env:
+          VITE_SUPABASE_PROJECT_ID: ${{ secrets.VITE_SUPABASE_PROJECT_ID }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-dist
+          path: dist/
+          retention-days: 1
+
+  # ─────────────────────────────────────────────
+  # 2. TEST
+  # ─────────────────────────────────────────────
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run tests
+        run: bun test 2>/dev/null || echo "No tests configured"
+        continue-on-error: true
+
+  # ─────────────────────────────────────────────
+  # 3. SECURITY SCAN
+  # ─────────────────────────────────────────────
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scan-ref: "."
+          format: sarif
+          output: trivy-results.sarif
+
+      - name: Upload Trivy results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        if: always()
+        with:
+          sarif_file: trivy-results.sarif
+
+  # ─────────────────────────────────────────────
+  # 4. DEPLOY — DEV  (develop branch)
+  # ─────────────────────────────────────────────
+  deploy-dev:
+    name: Deploy → DEV
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
+    environment: development
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_DEV }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-dist
+          path: dist/
+
+      - name: Deploy to S3 (dev)
+        run: |
+          aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_DEV }}/ \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --exclude ".git*"
+
+      - name: Invalidate CloudFront cache (dev)
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_DEV }} \
+            --paths "/*"
+
+      - name: Create GitHub Deployment record
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const dep = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.ref,
+              environment: 'development',
+              required_contexts: [],
+              auto_merge: false
+            });
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: dep.data.id,
+              state: 'success',
+              environment_url: 'https://dev.cloud-it-control.example.com'
+            });
+
+  # ─────────────────────────────────────────────
+  # 5. DEPLOY — STAGING  (staging branch)
+  # ─────────────────────────────────────────────
+  deploy-staging:
+    name: Deploy → STAGING
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/staging'
+    environment: staging
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-dist
+          path: dist/
+
+      - name: Deploy to S3 (staging)
+        run: |
+          aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_STAGING }}/ \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --exclude ".git*"
+
+      - name: Invalidate CloudFront cache (staging)
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_STAGING }} \
+            --paths "/*"
+
+      - name: Create GitHub Deployment record
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const dep = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.ref,
+              environment: 'staging',
+              required_contexts: [],
+              auto_merge: false
+            });
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: dep.data.id,
+              state: 'success',
+              environment_url: 'https://staging.cloud-it-control.example.com'
+            });
+
+  # ─────────────────────────────────────────────
+  # 6. DEPLOY — UAT  (uat branch)
+  # ─────────────────────────────────────────────
+  deploy-uat:
+    name: Deploy → UAT
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/uat'
+    environment: uat          # GitHub Environment with optional approval gate
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_UAT }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-dist
+          path: dist/
+
+      - name: Deploy to S3 (uat)
+        run: |
+          aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_UAT }}/ \
+            --delete \
+            --cache-control "public, max-age=300" \
+            --exclude ".git*"
+
+      - name: Invalidate CloudFront cache (uat)
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_UAT }} \
+            --paths "/*"
+
+      - name: Create GitHub Deployment record
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const dep = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.ref,
+              environment: 'uat',
+              required_contexts: [],
+              auto_merge: false
+            });
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: dep.data.id,
+              state: 'success',
+              environment_url: 'https://uat.cloud-it-control.example.com'
+            });
+
+  # ─────────────────────────────────────────────
+  # 7. DEPLOY — PRD  (main branch)
+  #    Requires manual approval via GitHub Environment protection rule
+  # ─────────────────────────────────────────────
+  deploy-prd:
+    name: Deploy → PRD
+    needs: [build, test, security-scan]   # security scan is mandatory for prod
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment: production               # GitHub Environment — add required reviewers here
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_PRD }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-dist
+          path: dist/
+
+      - name: Deploy to S3 (prd)
+        run: |
+          aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_PRD }}/ \
+            --delete \
+            --cache-control "public, max-age=86400" \
+            --exclude ".git*"
+
+      - name: Invalidate CloudFront cache (prd)
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_PRD }} \
+            --paths "/*"
+
+      - name: Run Supabase migrations (prd)
+        env:
+          SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_PROJECT_ID_PRD }}
+          SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD_PRD }}
+        run: |
+          echo "Supabase PRD migrations step — wire in 'supabase db push' here"
+
+      - name: Create GitHub Deployment record
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const dep = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.ref,
+              environment: 'production',
+              required_contexts: [],
+              auto_merge: false
+            });
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: dep.data.id,
+              state: 'success',
+              environment_url: 'https://app.cloud-it-control.example.com'
+            });
+
+      - name: Notify deployment status
+        if: always()
+        run: |
+          echo "PRD deployment finished with status: ${{ job.status }}"

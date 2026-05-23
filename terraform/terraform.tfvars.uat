@@ -1,0 +1,16 @@
+# UAT (User Acceptance Testing) Environment Configuration
+# Branch: uat → deploys here automatically via GitHub Actions
+# Purpose: Pre-production validation by QA / business stakeholders
+
+aws_region         = "us-east-1"
+environment        = "uat"
+domain_name        = "uat.cloud-it-control.example.com"
+certificate_domain = "cloud-it-control.example.com"
+hosted_zone_id     = "Z1234567890ABC"   # Replace: aws route53 list-hosted-zones-by-name
+enable_waf         = true               # WAF on — mirrors production security posture
+
+# Supabase — point to a dedicated UAT project or use staging project
+# Recommended: separate Supabase project so UAT data is isolated from prod
+supabase_project_id      = "REPLACE_WITH_UAT_SUPABASE_PROJECT_ID"
+supabase_url             = "https://REPLACE_WITH_UAT_SUPABASE_PROJECT_ID.supabase.co"
+supabase_publishable_key = "REPLACE_WITH_UAT_SUPABASE_ANON_KEY"
