@@ -20,7 +20,6 @@ provider "aws" {
       Environment = var.environment
       Application = "CloudITControl"
       ManagedBy   = "Terraform"
-      CreatedAt   = timestamp()
     }
   }
 }
