@@ -39,6 +39,7 @@ on:
 env:
   AWS_REGION: ${{ github.event.inputs.aws_region }}
   TF_ENV: ${{ github.event.inputs.environment }}
+  GH_ENVIRONMENT: ${{ github.event.inputs.environment == 'dev' && 'development' || github.event.inputs.environment == 'prd' && 'production' || github.event.inputs.environment }}
   TF_ACTION: ${{ github.event.inputs.action }}
   TF_IN_AUTOMATION: "true"
 
@@ -46,7 +47,7 @@ jobs:
   provision-and-deploy:
     name: Provision and deploy ${{ github.event.inputs.environment }}
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment == 'prd' && 'production' || github.event.inputs.environment }}
+    environment: ${{ github.event.inputs.environment == 'dev' && 'development' || github.event.inputs.environment == 'prd' && 'production' || github.event.inputs.environment }}
 
     permissions:
       contents: read
@@ -54,6 +55,26 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Check required secrets
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID_VALUE: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY_VALUE: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          VITE_SUPABASE_PROJECT_ID_VALUE: ${{ secrets.VITE_SUPABASE_PROJECT_ID }}
+          VITE_SUPABASE_URL_VALUE: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY_VALUE: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          set -euo pipefail
+          missing=0
+          for name in AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY VITE_SUPABASE_PROJECT_ID VITE_SUPABASE_URL VITE_SUPABASE_PUBLISHABLE_KEY; do
+            value_var="${name}_VALUE"
+            if [ -z "${!value_var}" ]; then
+              echo "::error::Missing GitHub secret: $name. Add it as a repository secret or in the '$GH_ENVIRONMENT' environment."
+              missing=1
+            fi
+          done
+          exit "$missing"
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
