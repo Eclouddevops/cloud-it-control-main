@@ -26,11 +26,13 @@ The `Provision AWS Infra and Deploy Website` workflow creates the Terraform stat
 
 | Secret | Source |
 |--------|--------|
-| `AWS_ACCESS_KEY_ID` | AWS IAM access key with permissions to create S3, CloudFront, ACM lookup, WAF, IAM OIDC/roles, CloudWatch, and Secrets Manager resources |
+| `AWS_ACCESS_KEY_ID` | Bootstrap AWS IAM access key allowed to assume `arn:aws:iam::713678752742:role/OrganizationAccountAccessRole` |
 | `AWS_SECRET_ACCESS_KEY` | Matching AWS IAM secret access key |
 | `VITE_SUPABASE_PROJECT_ID` | Supabase Dashboard -> Settings -> General |
 | `VITE_SUPABASE_URL` | Supabase Dashboard -> Settings -> API |
 | `VITE_SUPABASE_PUBLISHABLE_KEY` | Supabase Dashboard -> Settings -> API |
+
+The workflow always verifies that AWS credentials resolve to target account `713678752742` before it creates infrastructure.
 
 Workflow inputs:
 

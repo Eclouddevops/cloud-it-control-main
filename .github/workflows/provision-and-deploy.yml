@@ -42,6 +42,7 @@ env:
   GH_ENVIRONMENT: ${{ github.event.inputs.environment == 'dev' && 'development' || github.event.inputs.environment == 'prd' && 'production' || github.event.inputs.environment }}
   TF_ACTION: ${{ github.event.inputs.action }}
   TF_IN_AUTOMATION: "true"
+  TARGET_AWS_ROLE_ARN: arn:aws:iam::713678752742:role/OrganizationAccountAccessRole
 
 jobs:
   provision-and-deploy:
@@ -82,6 +83,18 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.TARGET_AWS_ROLE_ARN }}
+          role-session-name: github-actions-cloud-it-control-${{ env.TF_ENV }}
+
+      - name: Verify target AWS account
+        shell: bash
+        run: |
+          set -euo pipefail
+          account_id="$(aws sts get-caller-identity --query Account --output text)"
+          if [ "$account_id" != "713678752742" ]; then
+            echo "::error::Expected AWS account 713678752742, but credentials resolved to $account_id"
+            exit 1
+          fi
 
       - name: Resolve Terraform state bucket
         id: state
