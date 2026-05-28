@@ -1,5 +1,5 @@
 # Production Environment Configuration
-aws_region              = "us-east-1"
+aws_region              = "ap-south-1"
 environment             = "prod"
 domain_name             = "app.cloud-it-control.example.com"
 certificate_domain      = "cloud-it-control.example.com"

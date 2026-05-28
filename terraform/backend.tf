@@ -5,7 +5,7 @@ terraform {
     # terraform init \
     #   -backend-config="bucket=cloud-it-control-tf-state-123456789" \
     #   -backend-config="key=dev/terraform.tfstate" \
-    #   -backend-config="region=us-east-1" \
+    #   -backend-config="region=ap-south-1" \
     #   -backend-config="encrypt=true" \
     #   -backend-config="dynamodb_table=terraform-locks"
     

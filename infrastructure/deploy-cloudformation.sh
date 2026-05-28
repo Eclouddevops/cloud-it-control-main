@@ -6,7 +6,7 @@ set -e
 # Environments: dev | staging | uat | prd
 
 ENVIRONMENT=${1:-dev}
-REGION=${2:-us-east-1}
+REGION=${2:-ap-south-1}
 STACK_NAME="cloud-it-control-$ENVIRONMENT"
 DOMAIN_NAME=${3:-"app.$ENVIRONMENT.example.com"}
 HOSTED_ZONE_ID=${4:-""}

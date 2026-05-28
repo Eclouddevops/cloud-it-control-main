@@ -6,7 +6,7 @@ set -e
 # Environments: dev | staging | uat | prd
 
 ENVIRONMENT=${1:-dev}
-REGION=${2:-us-east-1}
+REGION=${2:-ap-south-1}
 
 echo "=== Deploying Cloud IT Control to AWS ==="
 echo "Environment: $ENVIRONMENT"

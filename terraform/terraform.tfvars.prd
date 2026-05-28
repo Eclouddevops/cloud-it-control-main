@@ -2,7 +2,7 @@
 # Branch: main → deploys here automatically via GitHub Actions
 # Purpose: Live customer-facing environment — treat with care
 
-aws_region         = "us-east-1"
+aws_region         = "ap-south-1"
 environment        = "prd"
 domain_name        = "app.cloud-it-control.example.com"
 certificate_domain = "cloud-it-control.example.com"

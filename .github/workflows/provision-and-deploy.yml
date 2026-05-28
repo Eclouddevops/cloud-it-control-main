@@ -22,14 +22,14 @@ on:
           - apply
         default: plan
       aws_region:
-        description: "AWS region. CloudFront ACM certificates must be in us-east-1."
+        description: "AWS region for infrastructure deployment"
         required: true
-        default: us-east-1
+        default: ap-south-1
       domain_name:
         description: "Website hostname managed in Cloudflare, for example dev.example.com"
         required: true
       certificate_domain:
-        description: "Issued ACM certificate domain in us-east-1, for example *.example.com"
+        description: "Issued ACM certificate domain (for CloudFront, must be in us-east-1 or same region)"
         required: true
       state_bucket:
         description: "Optional Terraform state bucket. Leave blank to auto-create one."

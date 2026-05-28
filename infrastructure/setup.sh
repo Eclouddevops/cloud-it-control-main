@@ -26,7 +26,7 @@ echo "✅ AWS CLI found"
 echo ""
 echo "Getting AWS Account information..."
 ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-REGION=$(aws configure get region || echo "us-east-1")
+REGION=$(aws configure get region || echo "ap-south-1")
 
 echo "✅ AWS Account ID: $ACCOUNT_ID"
 echo "✅ AWS Region: $REGION"

@@ -10,7 +10,7 @@
 # cp terraform.tfvars.dev terraform.tfvars
 
 # Create terraform.tfvars.dev with:
-aws_region              = "us-east-1"
+aws_region              = "ap-south-1"
 environment             = "dev"
 domain_name             = "dev.cloud-it-control.com"
 certificate_domain      = "cloud-it-control.com"
