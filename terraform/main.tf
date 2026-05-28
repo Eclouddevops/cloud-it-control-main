@@ -15,7 +15,13 @@ terraform {
 provider "aws" {
   region  = var.aws_region
   profile = var.aws_profile
-  
+
+  # Use explicit assume_role to avoid sts:TagSession requirement
+  assume_role {
+    role_arn     = "arn:aws:iam::713678752742:role/OrganizationAccountAccessRole"
+    session_name = "TerraformDeployment"
+  }
+
   default_tags {
     tags = {
       Environment = var.environment
