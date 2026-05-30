@@ -27,7 +27,8 @@ on:
         default: us-east-1
       domain_name:
         description: "Website hostname managed in Cloudflare, for example dev.example.com"
-        required: true
+        required: false
+        default: ""
       certificate_domain:
         description: "Issued ACM certificate domain (leave empty to skip SSL and use CloudFront default)"
         required: false

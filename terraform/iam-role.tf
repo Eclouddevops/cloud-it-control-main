@@ -1,35 +1,7 @@
-# IAM Role for cross-account access with proper TagSession permissions
-resource "aws_iam_role" "organization_access_role" {
-  name = "OrganizationAccountAccessRole"
-  
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Principal = {
-          AWS = [
-            "arn:aws:iam::226563001214:user/santosh.mirajkar@timesgroup.com",
-            "arn:aws:iam::226563001214:root"
-          ]
-        }
-        Action = [
-          "sts:AssumeRole",
-          "sts:TagSession"
-        ]
-      }
-    ]
-  })
+# The OrganizationAccountAccessRole already exists in account 713678752742
+# (created by AWS Organizations). We reference it by ARN instead of managing it.
+# Trust policy is managed manually via update-trust-policy.bat/sh
 
-  tags = {
-    Name        = "OrganizationAccountAccessRole"
-    Environment = var.environment
-    Purpose     = "Cross-account access with TagSession support"
-  }
-}
-
-# Attach AdministratorAccess policy
-resource "aws_iam_role_policy_attachment" "admin_access" {
-  role       = aws_iam_role.organization_access_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+locals {
+  organization_access_role_arn = "arn:aws:iam::713678752742:role/OrganizationAccountAccessRole"
 }

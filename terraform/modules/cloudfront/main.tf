@@ -112,20 +112,11 @@ resource "aws_cloudfront_distribution" "this" {
   }
   
   # SSL/TLS Configuration
-  dynamic "viewer_certificate" {
-    for_each = var.certificate_arn != "" ? [1] : []
-    content {
-      acm_certificate_arn      = var.certificate_arn
-      ssl_support_method       = "sni-only"
-      minimum_protocol_version = "TLSv1.2_2021"
-    }
-  }
-  
-  dynamic "viewer_certificate" {
-    for_each = var.certificate_arn == "" ? [1] : []
-    content {
-      cloudfront_default_certificate = true
-    }
+  viewer_certificate {
+    acm_certificate_arn            = var.certificate_arn != "" ? var.certificate_arn : null
+    ssl_support_method             = var.certificate_arn != "" ? "sni-only" : null
+    minimum_protocol_version       = var.certificate_arn != "" ? "TLSv1.2_2021" : null
+    cloudfront_default_certificate = var.certificate_arn == "" ? true : null
   }
   
   aliases = var.certificate_arn != "" ? [var.domain_name] : []
