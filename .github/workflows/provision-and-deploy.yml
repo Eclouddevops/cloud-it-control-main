@@ -151,9 +151,22 @@ jobs:
       - name: Terraform init
         working-directory: terraform
         run: |
-          terraform init \
-            -backend-config="bucket=${{ steps.state.outputs.bucket }}" \
-            -backend-config="key=${{ env.TF_ENV }}/terraform.tfstate" \
+          # Delete stale state that has old provider config with profile reference
+          STATE_KEY="${TF_ENV}/terraform.tfstate"
+          BUCKET="${{ steps.state.outputs.bucket }}"
+          if aws s3api head-object --bucket "$BUCKET" --key "$STATE_KEY" 2>/dev/null; then
+            echo "Found existing state file - checking if it has stale provider config..."
+            aws s3 cp "s3://${BUCKET}/${STATE_KEY}" /tmp/tfstate.json 2>/dev/null || true
+            if grep -q "Devops-Team" /tmp/tfstate.json 2>/dev/null; then
+              echo "State has stale 'Devops-Team' profile reference - removing stale state"
+              aws s3 rm "s3://${BUCKET}/${STATE_KEY}"
+              aws s3 rm "s3://${BUCKET}/${STATE_KEY}.backup" 2>/dev/null || true
+            fi
+          fi
+
+          terraform init -reconfigure \
+            -backend-config="bucket=$BUCKET" \
+            -backend-config="key=$STATE_KEY" \
             -backend-config="region=${{ env.AWS_REGION }}" \
             -backend-config="encrypt=true"
 
