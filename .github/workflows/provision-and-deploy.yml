@@ -154,10 +154,33 @@ jobs:
           STATE_KEY="${TF_ENV}/terraform.tfstate"
           BUCKET="${{ steps.state.outputs.bucket }}"
           
-          # Force-remove stale state that references old provider with 'Devops-Team' profile
-          # Safe because no real infrastructure has been created yet (only outputs in state)
-          echo "Removing stale terraform state to fix provider profile error..."
-          aws s3 rm "s3://${BUCKET}/${STATE_KEY}" 2>/dev/null || true
+          # Permanently delete stale state (including all versions) that has old provider config
+          echo "Purging all versions of stale terraform state..."
+          # List and delete all object versions
+          VERSIONS=$(aws s3api list-object-versions --bucket "$BUCKET" --prefix "$STATE_KEY" --query 'Versions[].{Key:Key,VersionId:VersionId}' --output json 2>/dev/null || echo "[]")
+          if [ "$VERSIONS" != "[]" ] && [ "$VERSIONS" != "null" ] && [ -n "$VERSIONS" ]; then
+            echo "$VERSIONS" | python3 -c "
+          import json, sys, subprocess
+          versions = json.load(sys.stdin)
+          if versions:
+            for v in versions:
+              subprocess.run(['aws', 's3api', 'delete-object', '--bucket', '$BUCKET', '--key', v['Key'], '--version-id', v['VersionId']], check=True)
+              print(f\"Deleted version {v['VersionId']}\")
+          "
+          fi
+          # Also delete any delete markers
+          MARKERS=$(aws s3api list-object-versions --bucket "$BUCKET" --prefix "$STATE_KEY" --query 'DeleteMarkers[].{Key:Key,VersionId:VersionId}' --output json 2>/dev/null || echo "[]")
+          if [ "$MARKERS" != "[]" ] && [ "$MARKERS" != "null" ] && [ -n "$MARKERS" ]; then
+            echo "$MARKERS" | python3 -c "
+          import json, sys, subprocess
+          markers = json.load(sys.stdin)
+          if markers:
+            for m in markers:
+              subprocess.run(['aws', 's3api', 'delete-object', '--bucket', '$BUCKET', '--key', m['Key'], '--version-id', m['VersionId']], check=True)
+              print(f\"Deleted marker {m['VersionId']}\")
+          "
+          fi
+          echo "State purged. Starting fresh."
           
           terraform init -reconfigure \
             -backend-config="bucket=$BUCKET" \
