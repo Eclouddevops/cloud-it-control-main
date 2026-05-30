@@ -5,9 +5,9 @@ variable "aws_region" {
 }
 
 variable "aws_profile" {
-  description = "AWS CLI source profile (credentials profile, not the role profile)"
+  description = "AWS CLI source profile (credentials profile, not the role profile). Leave empty in CI."
   type        = string
-  default     = "Devops-Team"
+  default     = ""
 }
 
 variable "environment" {
