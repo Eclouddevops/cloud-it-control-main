@@ -57,6 +57,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Verify no duplicate terraform files
+        shell: bash
+        run: |
+          if [ -f "terraform/bootstrap-iam-role.tf" ]; then
+            echo "::error::bootstrap-iam-role.tf should not exist - removing"
+            rm -f terraform/bootstrap-iam-role.tf
+          fi
+
       - name: Check required secrets
         shell: bash
         env:
