@@ -19,8 +19,9 @@ variable "domain_name" {
 }
 
 variable "certificate_domain" {
-  description = "Domain for ACM certificate (used to lookup existing certificate)"
+  description = "Domain for ACM certificate (used to lookup existing certificate). Leave empty to skip."
   type        = string
+  default     = ""
 }
 
 variable "enable_waf" {

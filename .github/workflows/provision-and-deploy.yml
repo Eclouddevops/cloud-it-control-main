@@ -29,8 +29,9 @@ on:
         description: "Website hostname managed in Cloudflare, for example dev.example.com"
         required: true
       certificate_domain:
-        description: "Issued ACM certificate domain (for CloudFront, must be in us-east-1 or same region)"
-        required: true
+        description: "Issued ACM certificate domain (leave empty to skip SSL and use CloudFront default)"
+        required: false
+        default: ""
       state_bucket:
         description: "Optional Terraform state bucket. Leave blank to auto-create one."
         required: false

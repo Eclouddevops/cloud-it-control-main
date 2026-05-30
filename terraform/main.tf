@@ -25,8 +25,9 @@ provider "aws" {
   }
 }
 
-# Data source for ACM certificate
+# Data source for ACM certificate (only if certificate_domain is provided)
 data "aws_acm_certificate" "main" {
+  count    = var.certificate_domain != "" ? 1 : 0
   domain   = var.certificate_domain
   statuses = ["ISSUED"]
 }
@@ -78,7 +79,7 @@ module "cloudfront" {
   origin_access_identity_iam_arn = aws_cloudfront_origin_access_identity.main.iam_arn
   
   domain_name        = var.domain_name
-  certificate_arn    = data.aws_acm_certificate.main.arn
+  certificate_arn    = var.certificate_domain != "" ? data.aws_acm_certificate.main[0].arn : ""
   environment        = var.environment
   enable_waf         = var.enable_waf
   
