@@ -1,7 +1,7 @@
 # Development Environment Configuration
 # Copy this file to terraform.tfvars and update with your values
 
-aws_region              = "ap-south-1"
+aws_region              = "us-east-1"
 environment             = "dev"
 domain_name             = "dev.cloud-it-control.example.com"
 certificate_domain      = "cloud-it-control.example.com"

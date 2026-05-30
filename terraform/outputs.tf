@@ -32,3 +32,8 @@ output "github_actions_role_arn" {
   description = "GitHub Actions IAM Role ARN"
   value       = module.github_actions.github_actions_role_arn
 }
+
+output "organization_access_role_arn" {
+  description = "Organization Account Access Role ARN for cross-account access"
+  value       = aws_iam_role.organization_access_role.arn
+}

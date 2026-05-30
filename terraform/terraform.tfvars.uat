@@ -2,7 +2,7 @@
 # Branch: uat → deploys here automatically via GitHub Actions
 # Purpose: Pre-production validation by QA / business stakeholders
 
-aws_region         = "ap-south-1"
+aws_region         = "us-east-1"
 environment        = "uat"
 domain_name        = "uat.cloud-it-control.example.com"
 certificate_domain = "cloud-it-control.example.com"

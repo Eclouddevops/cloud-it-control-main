@@ -1,0 +1,66 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Cross-Account IAM Role with TagSession permissions for Terraform deployments'
+
+Parameters:
+  SourceAccountId:
+    Type: String
+    Default: '226563001214'
+    Description: 'Source AWS Account ID that will assume this role'
+  
+  SourceUserName:
+    Type: String
+    Default: 'santosh.mirajkar@timesgroup.com'
+    Description: 'Source IAM user name that will assume this role'
+  
+  AWSRegion:
+    Type: String
+    Default: 'ap-south-1'
+    Description: 'AWS Region for the deployment'
+
+Resources:
+  OrganizationAccountAccessRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: OrganizationAccountAccessRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !Sub 'arn:aws:iam::${SourceAccountId}:user/${SourceUserName}'
+                - !Sub 'arn:aws:iam::${SourceAccountId}:root'
+            Action:
+              - 'sts:AssumeRole'
+              - 'sts:TagSession'
+            Condition:
+              StringEquals:
+                'sts:RequestedRegion': !Ref AWSRegion
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AdministratorAccess'
+      Tags:
+        - Key: Name
+          Value: OrganizationAccountAccessRole
+        - Key: Purpose
+          Value: 'Cross-account access with TagSession support'
+        - Key: SourceAccount
+          Value: !Ref SourceAccountId
+        - Key: CreatedBy
+          Value: CloudFormation
+
+Outputs:
+  RoleArn:
+    Description: 'ARN of the created cross-account role'
+    Value: !GetAtt OrganizationAccountAccessRole.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-RoleArn'
+  
+  RoleName:
+    Description: 'Name of the created cross-account role'
+    Value: !Ref OrganizationAccountAccessRole
+    Export:
+      Name: !Sub '${AWS::StackName}-RoleName'
+  
+  TestCommand:
+    Description: 'Command to test role assumption'
+    Value: !Sub 'aws sts assume-role --role-arn ${OrganizationAccountAccessRole.Arn} --role-session-name test-session'

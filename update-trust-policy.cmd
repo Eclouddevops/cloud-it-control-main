@@ -1,0 +1,1 @@
+aws iam update-assume-role-policy --role-name OrganizationAccountAccessRole --policy-document file://iam-trust-policy.json

@@ -24,7 +24,7 @@ on:
       aws_region:
         description: "AWS region for infrastructure deployment"
         required: true
-        default: ap-south-1
+        default: us-east-1
       domain_name:
         description: "Website hostname managed in Cloudflare, for example dev.example.com"
         required: true
@@ -84,7 +84,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ env.TARGET_AWS_ROLE_ARN }}
-          role-session-name: github-actions-cloud-it-control-${{ env.TF_ENV }}
+          role-session-name: github-actions-cloud-it-control-${{ env.TF_ENV }}-${{ github.run_number }}
 
       - name: Verify target AWS account
         shell: bash

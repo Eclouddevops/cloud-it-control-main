@@ -1,13 +1,13 @@
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "ap-south-1"
+  default     = "us-east-1"
 }
 
 variable "aws_profile" {
   description = "AWS CLI source profile (credentials profile, not the role profile)"
   type        = string
-  default     = "DevOps"
+  default     = "Devops-Team"
 }
 
 variable "environment" {

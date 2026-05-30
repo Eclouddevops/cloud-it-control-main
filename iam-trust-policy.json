@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::226563001214:user/santosh.mirajkar@timesgroup.com",
+          "arn:aws:iam::226563001214:root"
+        ]
+      },
+      "Action": [
+        "sts:AssumeRole",
+        "sts:TagSession"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "sts:RequestedRegion": "ap-south-1"
+        }
+      }
+    }
+  ]
+}
