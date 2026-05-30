@@ -17,11 +17,6 @@ resource "aws_iam_role" "organization_access_role" {
           "sts:AssumeRole",
           "sts:TagSession"
         ]
-        Condition = {
-          StringEquals = {
-            "sts:RequestedRegion" = var.aws_region
-          }
-        }
       }
     ]
   })

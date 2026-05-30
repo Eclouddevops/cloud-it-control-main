@@ -12,12 +12,7 @@
       "Action": [
         "sts:AssumeRole",
         "sts:TagSession"
-      ],
-      "Condition": {
-        "StringEquals": {
-          "sts:RequestedRegion": "ap-south-1"
-        }
-      }
+      ]
     }
   ]
 }

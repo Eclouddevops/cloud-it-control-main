@@ -135,7 +135,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE_ARN_DEV }}
-          role-skip-session-tagging: true
 
       - name: Download build artifacts
         uses: actions/download-artifact@v3
@@ -202,7 +201,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
-          role-skip-session-tagging: true
 
       - name: Download build artifacts
         uses: actions/download-artifact@v3
@@ -269,7 +267,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE_ARN_UAT }}
-          role-skip-session-tagging: true
 
       - name: Download build artifacts
         uses: actions/download-artifact@v3
@@ -337,7 +334,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE_ARN_PRD }}
-          role-skip-session-tagging: true
 
       - name: Download build artifacts
         uses: actions/download-artifact@v3
