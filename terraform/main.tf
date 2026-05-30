@@ -13,8 +13,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = var.aws_region
-  profile = var.aws_profile != "" ? var.aws_profile : null
+  region = var.aws_region
 
   default_tags {
     tags = {
