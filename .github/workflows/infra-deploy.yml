@@ -26,7 +26,7 @@ on:
       aws_region:
         description: "AWS region"
         required: false
-        default: "ap-south-1"
+        default: "us-east-1"
 
 env:
   AWS_REGION: ${{ github.event.inputs.aws_region }}
@@ -59,34 +59,46 @@ jobs:
         with:
           terraform_version: "~1.7"
 
-      # ── AWS credentials (environment-specific OIDC role) ──────────────────
+      # ── AWS credentials (environment-specific role via access keys) ──────────────────
       - name: Configure AWS credentials (dev)
         if: env.TF_ENV == 'dev'
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN_DEV }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_DEV }}
+          role-skip-session-tagging: true
 
       - name: Configure AWS credentials (staging)
         if: env.TF_ENV == 'staging'
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
+          role-skip-session-tagging: true
 
       - name: Configure AWS credentials (uat)
         if: env.TF_ENV == 'uat'
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN_UAT }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_UAT }}
+          role-skip-session-tagging: true
 
       - name: Configure AWS credentials (prd)
         if: env.TF_ENV == 'prd'
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN_PRD }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_PRD }}
+          role-skip-session-tagging: true
 
       # ── Terraform init ────────────────────────────────────────────────────
       - name: Terraform Init

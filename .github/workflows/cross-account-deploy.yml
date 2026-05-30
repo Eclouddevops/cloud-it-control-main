@@ -25,7 +25,7 @@ on:
       aws_region:
         description: "AWS region"
         required: false
-        default: "ap-south-1"
+        default: "us-east-1"
       domain_name:
         description: "Website hostname (e.g., dev.example.com)"
         required: true
@@ -170,6 +170,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ needs.create-iam-role.outputs.role-arn }}
           role-session-name: github-actions-terraform-${{ env.TF_ENV }}-${{ github.run_number }}
+          role-skip-session-tagging: true
 
       - name: Verify target account access
         run: |
@@ -284,6 +285,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ needs.create-iam-role.outputs.role-arn }}
           role-session-name: github-actions-deploy-${{ env.TF_ENV }}-${{ github.run_number }}
+          role-skip-session-tagging: true
 
       - name: Setup Terraform (for outputs)
         uses: hashicorp/setup-terraform@v3
